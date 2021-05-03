@@ -1,5 +1,10 @@
 .App {
+  background: linear-gradient(180.29deg, #20293F 0.25%, #0A0D14 162.58%);
   text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .App-logo {
