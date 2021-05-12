@@ -1,23 +1,35 @@
-import React from "react"
+import React, {useState} from "react"
 import {NavLink} from "react-router-dom"
 import styled from "styled-components"
 import socials from "./../../data/socials"
 import SocialButton from "./SocialButton"
 
 function Navigation() {
-    return (
-       <Styles>
-           <div className="container">
-               <div className="socials-container">
-                    {socials.map((social, i) => <SocialButton key={i} {...social} />)}
-               </div>
 
-               <div className="links-container">
+    const [drawerOpened, setDrawerOpened] = useState(false)
+
+    return (
+       <Styles drawerOpened={drawerOpened}>
+            <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
+            
+            <div className="container">
+                <div className="hamburger-button" onClick={() => setDrawerOpened(!drawerOpened)}>
+                    <div/>
+                    <div/>
+                    <div/>
+                </div>
+
+                <div className="socials-container">
+                    {socials.map((social, i) => <SocialButton key={i} {...social} />)}
+                </div>
+
+                <div className="links-container">
                    <MyNavLink activeClassName="active-link" exact to="/">Accueil</MyNavLink>
                    <MyNavLink activeClassName="active-link" exact to="/apps">Applications</MyNavLink>
                    <MyNavLink activeClassName="active-link" exact to="/contact">Contact</MyNavLink>
-               </div>
-           </div>
+                </div>
+            </div>
+
        </Styles>
     )
 }
@@ -28,6 +40,64 @@ const Styles = styled.div`
     top: 0;
     background-color: #20293F;
 
+    .mobile-scrim {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        right: 0;
+    }
+
+    @media (max-width: 550px) {
+        position: fixed;
+
+        .mobile-scrim {
+            display: ${props => props.drawerOpened ? "block" : "none"};
+        }
+
+    }
+
+    .hamburger-button {
+        display: none;
+        position: absolute;
+        transition: all 0.5s ease;
+        right: ${props => props.drawerOpened ? 20 : -20}px;
+        transform: ${props => `translateX(${props.drawerOpened ? "0%" : "100%"})`};
+        top: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+        align-items: center;
+
+        div {
+            transition: all 0.5s ease;
+            background-color:${props => props.drawerOpened ? "#20293F" : "white"};
+            height: 3px;
+            width: 30px;
+        }
+        
+        div:nth-child(1) {
+            transform: rotate(${props => props.drawerOpened ? -45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
+            height: ${props => props.drawerOpened ? 6 : 3}px;
+        }
+
+        div:nth-child(2) {
+            transform: rotate(${props => props.drawerOpened ? -45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
+            opacity: ${props => props.drawerOpened ? 0 : 1}
+        }
+
+        div:nth-child(3) {
+            transform: rotate(${props => props.drawerOpened ? 45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
+            height: ${props => props.drawerOpened ? 6 : 3}px;
+        }
+
+        @media (max-width: 550px) {
+            display: flex;
+
+        }
+
+    }
+
     .container {
         position: relative;
         display: flex;
@@ -35,7 +105,37 @@ const Styles = styled.div`
         width: 100vw;
 
         @media (max-width: 550px) {
-            display: none;
+            position: fixed;
+            height: 100vh;
+            width: 60%;
+            background-color: white;
+            transition: all 0.5s ease;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            transform: ${props => `translateX(${props.drawerOpened ? "0%" : "-101%"})`};
+
+            .links-container {
+                font-size: 1.6em;
+                position: relative; 
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 70px;
+                width: 100%;
+                height: fit-content;
+                gap: 50px;
+                margin-left: 0;
+            }
+
+            .socials-container {
+                margin: 0;
+                margin-left: 10%;
+                flex-direction: column;
+                align-self: flex-start;
+                align-items: flex-start;
+                margin-bottom: 30px;
+            }
+
         }
     }
 
@@ -46,7 +146,7 @@ const Styles = styled.div`
         justify-content: space-around;
         align-items: center;
 
-        @media (max-width: 725px) {
+        @media (min-width: 550px) and (max-width: 725px) {
            gap: 20px;
            margin-left: 20px;
         }
@@ -63,7 +163,7 @@ const Styles = styled.div`
         width: 50%;
         height: 100%;
 
-        @media (max-width: 725px) {
+        @media (min-width: 550px) and (max-width: 725px) {
             width: 75%;
         }
     }
@@ -97,6 +197,14 @@ const MyNavLink = styled(NavLink)`
         height: 1px;
         transition: all 0.5s ease;
         background-color: white;
+    }
+
+    @media (max-width: 550px) {
+        color: #20293F;
+
+        &::after {
+            background-color: #20293F;
+        }
     }
 
     &:hover {

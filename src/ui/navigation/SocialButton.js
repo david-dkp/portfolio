@@ -31,18 +31,6 @@ const Styles = styled.div`
     justify-content: flex-start;
     overflow: hidden;
 
-    svg {
-        height: 30px;
-        width: 30px;
-        fill: white;
-        transition: all 0.5s ease;
-    }
-
-    h1 {
-        user-select: none;
-        font-size: 1.4em;
-    }
-
     .social-name-container {
         display: flex;
         justify-content: start;
@@ -50,14 +38,53 @@ const Styles = styled.div`
         transition: all 0.5s ease;
         width: 0;
         overflow: hidden;
-        margin-left: 5px;
-        margin-right: 5px;
     }
 
-    &:hover{
+    svg {
+        height: 30px;
+        width: 30px;
+        fill: white;
+        transition: all 0.5s ease;
+    }
+
+    @media (max-width: 550px) {
+        background-color: white;
+        border: 2px solid #20293F;
+        padding: 7px;
+
+        &:active{
+            transition: all 0.25s ease;
+            background-color: gray;
+        }
+
+        svg {
+            fill: ${(props) => {
+                return props.color
+            }};
+        }
+
+        .social-name-container {
+            width: ${props => props.socialWidth+"px"};
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+    h1 {
+        user-select: none;
+        font-size: 1.4em;
+    }
+
+    @media (min-width: 550px) {
+        &:hover{
         transition: all 0.5s ease;
         background-color:rgba(255, 255, 255, 1);
         
+        &:active{
+            transition: all 0.25s ease;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
         svg {
             transition: all 0.5s ease;
             fill: ${(props) => {
@@ -69,9 +96,13 @@ const Styles = styled.div`
             transition: all 0.5s ease;
             width: ${props => props.socialWidth+"px"};
             overflow: visible;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
+        }
     }
+
 
 `
 
