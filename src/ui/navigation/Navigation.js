@@ -1,11 +1,17 @@
 import React from "react"
 import {NavLink} from "react-router-dom"
 import styled from "styled-components"
+import socials from "./../../data/socials"
+import SocialButton from "./SocialButton"
 
 function Navigation() {
     return (
        <Styles>
            <div className="container">
+               <div className="socials-container">
+                    {socials.map((social, i) => <SocialButton key={i} {...social} />)}
+               </div>
+
                <div className="links-container">
                    <MyNavLink activeClassName="active-link" exact to="/">Accueil</MyNavLink>
                    <MyNavLink activeClassName="active-link" exact to="/apps">Applications</MyNavLink>
@@ -24,23 +30,38 @@ const Styles = styled.div`
 
     .container {
         position: relative;
+        display: flex;
         height: 80px;
         width: 100vw;
 
-        @media (max-width: 425px) {
+        @media (max-width: 550px) {
             display: none;
         }
     }
 
+    .socials-container {
+        margin-left: 40px;
+        display: flex;
+        gap: 40px;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (max-width: 725px) {
+           gap: 20px;
+           margin-left: 20px;
+        }
+    }
+
     .links-container {
+        position: relative;
         font-size: 1.3em;
         color: white;
-        margin-left: auto;
         display: flex;
+        margin-left: auto;
         align-items: center;
         justify-content: space-evenly;
-        height: 100%;
         width: 50%;
+        height: 100%;
 
         @media (max-width: 725px) {
             width: 75%;
@@ -59,6 +80,8 @@ const Styles = styled.div`
 const MyNavLink = styled(NavLink)`
     position: relative;
     text-decoration: none;
+    user-select: none;
+
     color: white;
     opacity: 0.5;
     transition: all 0.5s ease;
