@@ -11,7 +11,7 @@ function Navigation() {
     return (
        <Styles drawerOpened={drawerOpened}>
             <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
-            
+
             <div className="container">
                 <div className="hamburger-button" onClick={() => setDrawerOpened(!drawerOpened)}>
                     <div/>
@@ -35,7 +35,6 @@ function Navigation() {
 }
 
 const Styles = styled.div`
-
     position: sticky;
     top: 0;
     background-color: #20293F;
@@ -46,15 +45,6 @@ const Styles = styled.div`
         display: none;
         position: fixed;
         right: 0;
-    }
-
-    @media (max-width: 550px) {
-        position: fixed;
-
-        .mobile-scrim {
-            display: ${props => props.drawerOpened ? "block" : "none"};
-        }
-
     }
 
     .hamburger-button {
@@ -90,12 +80,6 @@ const Styles = styled.div`
             transform: rotate(${props => props.drawerOpened ? 45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
             height: ${props => props.drawerOpened ? 6 : 3}px;
         }
-
-        @media (max-width: 550px) {
-            display: flex;
-
-        }
-
     }
 
     .container {
@@ -103,53 +87,6 @@ const Styles = styled.div`
         display: flex;
         height: 80px;
         width: 100vw;
-
-        @media (max-width: 550px) {
-            position: fixed;
-            height: 100vh;
-            width: 60%;
-            background-color: white;
-            transition: all 0.5s ease;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            align-items: center;
-            transform: ${props => `translateX(${props.drawerOpened ? "0%" : "-101%"})`};
-
-            .links-container {
-                font-size: 1.6em;
-                position: relative; 
-                flex-direction: column;
-                justify-content: space-between;
-                margin-top: 70px;
-                width: 100%;
-                height: fit-content;
-                gap: 50px;
-                margin-left: 0;
-            }
-
-            .socials-container {
-                margin: 0;
-                margin-left: 10%;
-                flex-direction: column;
-                align-self: flex-start;
-                align-items: flex-start;
-                margin-bottom: 30px;
-            }
-
-        }
-    }
-
-    .socials-container {
-        margin-left: 40px;
-        display: flex;
-        gap: 40px;
-        justify-content: space-around;
-        align-items: center;
-
-        @media (min-width: 550px) and (max-width: 725px) {
-           gap: 20px;
-           margin-left: 20px;
-        }
     }
 
     .links-container {
@@ -162,14 +99,78 @@ const Styles = styled.div`
         justify-content: space-evenly;
         width: 50%;
         height: 100%;
+    }
 
-        @media (min-width: 550px) and (max-width: 725px) {
+    .socials-container {
+        margin-left: 40px;
+        display: flex;
+        gap: 40px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @media (max-width: 550px) {
+        position: fixed;
+
+        .container {
+            position: fixed;
+            height: 100vh;
+            width: 60%;
+            background-color: white;
+            transition: all 0.5s ease;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            transform: ${props => `translateX(${props.drawerOpened ? "0%" : "-101%"})`};
+        }
+
+        .links-container {
+            font-size: 1.6em;
+                position: relative; 
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 70px;
+                width: 100%;
+                height: fit-content;
+                gap: 50px;
+                margin-left: 0;
+        }
+
+        .socials-container {
+            margin: 0;
+            margin-left: 10%;
+            flex-direction: column;
+            align-self: flex-start;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .hamburger-button {
+            display: flex;
+        }
+
+        .mobile-scrim {
+            display: ${props => props.drawerOpened ? "block" : "none"};
+        }
+
+    }
+
+    @media (min-width: 550px) and (max-width: 725px) {
+        .links-container {
             width: 75%;
+        }
+
+        .socials-container {
+            gap: 20px;
+            margin-left: 20px;
         }
     }
 
     .active-link {
         opacity: 1;
+        &::after {
+            width: 100%auto;
+        }
     }
 
     .active-link::after{
@@ -201,7 +202,6 @@ const MyNavLink = styled(NavLink)`
 
     @media (max-width: 550px) {
         color: #20293F;
-
         &::after {
             background-color: #20293F;
         }
@@ -213,7 +213,7 @@ const MyNavLink = styled(NavLink)`
 
     &:hover::after {
             width: 100%;
-        }
+    }
 `
 
 
