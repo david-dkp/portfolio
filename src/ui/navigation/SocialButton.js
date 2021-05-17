@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styled from "styled-components"
 
+
 function SocialButton({svgComponent, color, socialName, url}) {
 
     const [socialWidth, setSocialWidth] = useState();
@@ -32,6 +33,7 @@ const Styles = styled.div`
     overflow: hidden;
 
     .social-name-container {
+        font-family: Arial, Helvetica, sans-serif;
         display: flex;
         justify-content: start;
         align-items: center;
@@ -45,6 +47,11 @@ const Styles = styled.div`
         width: 30px;
         fill: white;
         transition: all 0.5s ease;
+    }
+
+    h1 {
+        user-select: none;
+        font-size: 1.4em;
     }
 
     @media (max-width: 550px) {
@@ -68,11 +75,6 @@ const Styles = styled.div`
             margin-left: 5px;
             margin-right: 5px;
         }
-    }
-
-    h1 {
-        user-select: none;
-        font-size: 1.4em;
     }
 
     @media (min-width: 550px) {
