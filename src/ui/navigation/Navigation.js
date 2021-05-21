@@ -35,11 +35,11 @@ function Navigation() {
 }
 
 const Styles = styled.div`
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: #20293F;
 
     .mobile-scrim {
+        transition: all 0.5s ease;
         width: 100%;
         height: 100vh;
         display: none;
@@ -90,6 +90,7 @@ const Styles = styled.div`
     }
 
     .links-container {
+        font-family: Arial, Helvetica, sans-serif;
         position: relative;
         font-size: 1.3em;
         color: white;
@@ -109,13 +110,15 @@ const Styles = styled.div`
         align-items: center;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
         position: fixed;
 
         .container {
             position: fixed;
             height: 100vh;
+            min-width: 200px;
             width: 60%;
+            max-width: 300px;
             background-color: white;
             transition: all 0.5s ease;
             flex-direction: column-reverse;
@@ -155,17 +158,6 @@ const Styles = styled.div`
 
     }
 
-    @media (min-width: 550px) and (max-width: 725px) {
-        .links-container {
-            width: 75%;
-        }
-
-        .socials-container {
-            gap: 20px;
-            margin-left: 20px;
-        }
-    }
-
     .active-link {
         opacity: 1;
         &::after {
@@ -200,7 +192,7 @@ const MyNavLink = styled(NavLink)`
         background-color: white;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
         color: #20293F;
         &::after {
             background-color: #20293F;

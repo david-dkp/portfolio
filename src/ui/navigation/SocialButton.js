@@ -54,7 +54,7 @@ const Styles = styled.div`
         font-size: 1.4em;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
         background-color: white;
         border: 2px solid #20293F;
         padding: 7px;
@@ -77,7 +77,7 @@ const Styles = styled.div`
         }
     }
 
-    @media (min-width: 550px) {
+    @media (min-width: 768px) {
         &:hover{
         transition: all 0.5s ease;
         background-color:rgba(255, 255, 255, 1);

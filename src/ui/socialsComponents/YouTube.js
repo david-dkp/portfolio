@@ -7,6 +7,7 @@ function SvgYoutube(props) {
       viewBox="-21 -117 682.667 682"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
+      
       {...props}
     >
       <title>Youtube logo</title>
