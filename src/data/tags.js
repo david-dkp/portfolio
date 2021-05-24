@@ -1,4 +1,4 @@
-export default {
+const tags = {
     android: {
         label: "Android",
         color: "#3BD37F"
@@ -21,3 +21,5 @@ export default {
         color: "#61DBFB"
     }
 }
+
+export default tags

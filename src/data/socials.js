@@ -1,6 +1,6 @@
 import {YouTube, GitHub, LinkedIn} from "./../ui/socialsComponents"
 
-export default [
+const socials = [
     {
         svgComponent: GitHub,
         color: "#000000",
@@ -20,3 +20,5 @@ export default [
         socialName: "YouTube"
     },
 ]
+
+export default socials

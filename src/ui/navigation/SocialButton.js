@@ -11,7 +11,7 @@ function SocialButton({svgComponent, color, socialName, url}) {
         const width = nameElement.clientWidth
         console.log(width)
         setSocialWidth(width)
-    })
+    }, [socialWidth, socialName])
 
     return (
         <Styles socialWidth={socialWidth} color={color} onClick={() => window.open(url, "_blank")}>

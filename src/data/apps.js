@@ -5,11 +5,11 @@ import CryptoWalletAppImg from "../assets/projectImages/crypto_wallet_app.jpg"
 import CalculItImg from "../assets/projectImages/calcul_it.jpg"
 import ShaRideImg from "../assets/projectImages/ShaRide.jpg"
 
-export default [
+const apps = [
     {
         image: MappartImg,
         appName: "Mappart",
-        tags: [tags.android, tags.studentProject],
+        tags: [tags.android],
         description: "Une application qui facilite la recherche de logements partout dans le monde. Une relation entre acheteur et vendeur plus forte que jamais."
     },
     {
@@ -37,3 +37,5 @@ export default [
         description: "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide."
     },
 ]
+
+export default apps
