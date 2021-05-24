@@ -35,6 +35,7 @@ function Navigation() {
 }
 
 const Styles = styled.div`
+    z-index: 1;
     position: fixed;
     top: 0;
 
@@ -44,7 +45,6 @@ const Styles = styled.div`
         height: 100vh;
         display: none;
         position: fixed;
-        right: 0;
     }
 
     .hamburger-button {
@@ -111,7 +111,6 @@ const Styles = styled.div`
     }
 
     @media (max-width: 768px) {
-        position: fixed;
 
         .container {
             position: fixed;
@@ -129,14 +128,14 @@ const Styles = styled.div`
 
         .links-container {
             font-size: 1.6em;
-                position: relative; 
-                flex-direction: column;
-                justify-content: space-between;
-                margin-top: 70px;
-                width: 100%;
-                height: fit-content;
-                gap: 50px;
-                margin-left: 0;
+            position: relative; 
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 70px;
+            width: 100%;
+            height: fit-content;
+            gap: 50px;
+            margin-left: 0;
         }
 
         .socials-container {
