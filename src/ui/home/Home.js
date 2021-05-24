@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from "styled-components"
-
+import Presentation from "./Presentation"
 
 function Home() {
+
     return (
         <Styles>
-            Home
+            <Presentation/>
         </Styles>
     
     )
 }
 
 const Styles = styled.div`
-    height: 200vh; 
-
+    display: flex;
+    flex-direction: column;
 `
 
 export default Home

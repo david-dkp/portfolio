@@ -36,6 +36,18 @@ const apps = [
         tags: [tags.android, tags.studentProject],
         description: "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide."
     },
+    {
+        image: ShaRideImg,
+        appName: "ShaRide",
+        tags: [tags.android, tags.studentProject],
+        description: "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide."
+    },
+    {
+        image: ShaRideImg,
+        appName: "ShaRide",
+        tags: [tags.android, tags.studentProject],
+        description: "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide."
+    },
 ]
 
 export default apps
