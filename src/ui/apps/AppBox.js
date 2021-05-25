@@ -29,10 +29,12 @@ const Container = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 15px;
     transition: all 0.5s ease;
 
     @media (min-width: 768px) {
+        cursor: pointer;
+
         &:hover {
             transition: all 0.5s ease;
             transform: scale(1.05);
@@ -86,7 +88,6 @@ const InfoContainer = styled.div`
         .tags-container {
             display: flex;
             gap: 10px;
-            margin-top: 5px;
         }
     }
 `
