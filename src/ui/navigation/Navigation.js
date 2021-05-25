@@ -8,6 +8,10 @@ function Navigation() {
 
     const [drawerOpened, setDrawerOpened] = useState(false)
 
+    const onLinkClickListener = () => {
+        setDrawerOpened(false)
+    }
+
     return (
        <Styles drawerOpened={drawerOpened}>
             <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
@@ -24,9 +28,9 @@ function Navigation() {
                 </div>
 
                 <div className="links-container">
-                   <MyNavLink activeClassName="active-link" exact to="/">Accueil</MyNavLink>
-                   <MyNavLink activeClassName="active-link" exact to="/apps">Applications</MyNavLink>
-                   <MyNavLink activeClassName="active-link" exact to="/contact">Contact</MyNavLink>
+                   <MyNavLink onClick={onLinkClickListener} activeClassName="active-link" exact to="/">Accueil</MyNavLink>
+                   <MyNavLink onClick={onLinkClickListener} activeClassName="active-link" exact to="/apps">Applications</MyNavLink>
+                   <MyNavLink onClick={onLinkClickListener} activeClassName="active-link" exact to="/contact">Contact</MyNavLink>
                 </div>
             </div>
 
