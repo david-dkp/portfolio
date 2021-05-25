@@ -48,7 +48,7 @@ const Container = styled.div`
 const AppsContainer = styled.div`
     position: relative;
     top: 0px;
-    width: 70vw;
+    width: 80vw;
     min-width: 300px;
     left: 50%;
     transform: translateX(-50%);
