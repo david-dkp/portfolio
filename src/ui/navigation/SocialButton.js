@@ -9,7 +9,6 @@ function SocialButton({svgComponent, color, socialName, url}) {
     useEffect(() => {
         const nameElement = document.getElementById(socialName)
         const width = nameElement.clientWidth
-        console.log(width)
         setSocialWidth(width)
     }, [socialWidth, socialName])
 
