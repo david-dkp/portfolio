@@ -55,17 +55,20 @@ const Styles = styled.div`
         display: none;
         position: absolute;
         transition: all 0.5s ease;
-        right: ${props => props.drawerOpened ? 20 : -20}px;
+        right: ${(props) => props.drawerOpened ? 15 : -15}px;
         transform: ${props => `translateX(${props.drawerOpened ? "0%" : "100%"})`};
-        top: 20px;
+        top: 15px;
         flex-direction: column;
         justify-content: space-between;
         gap: 8px;
         align-items: center;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: ${(props) => props.drawerOpened ? "white" : "#161B26"};
 
         div {
             transition: all 0.5s ease;
-            background-color:${props => props.drawerOpened ? "#20293F" : "white"};
+            background-color:${(props) => props.drawerOpened ? "#20293F" : "white"};
             height: 3px;
             width: 30px;
         }
