@@ -17,7 +17,7 @@ function Navigation() {
             <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
 
             <div className="container">
-                <div className="hamburger-button" onClick={() => setDrawerOpened(!drawerOpened)}>
+                <div className={`hamburger-button ${drawerOpened ? "opened" : "closed"}`} onClick={() => setDrawerOpened(!drawerOpened)}>
                     <div/>
                     <div/>
                     <div/>
@@ -55,8 +55,6 @@ const Styles = styled.div`
         display: none;
         position: absolute;
         transition: all 0.5s ease;
-        right: ${(props) => props.drawerOpened ? 15 : -15}px;
-        transform: ${props => `translateX(${props.drawerOpened ? "0%" : "100%"})`};
         top: 15px;
         flex-direction: column;
         justify-content: space-between;
@@ -64,28 +62,62 @@ const Styles = styled.div`
         align-items: center;
         padding: 15px;
         border-radius: 10px;
-        background-color: ${(props) => props.drawerOpened ? "white" : "#161B26"};
 
         div {
             transition: all 0.5s ease;
-            background-color:${(props) => props.drawerOpened ? "#20293F" : "white"};
             height: 3px;
             width: 30px;
         }
         
+    }
+
+    .hamburger-button.opened {
+        right: 15px;
+        transform: translateX(0%);
+        background-color: white;
+
+        div {
+            background-color: #20293F
+        }
+
         div:nth-child(1) {
-            transform: rotate(${props => props.drawerOpened ? -45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
-            height: ${props => props.drawerOpened ? 6 : 3}px;
+            transform: rotate(-45deg) translateX(-5px);
+            height: 6px;
         }
 
         div:nth-child(2) {
-            transform: rotate(${props => props.drawerOpened ? -45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
-            opacity: ${props => props.drawerOpened ? 0 : 1}
+            transform: rotate(-45deg) translateX(-5px);
+            opacity: 0;
         }
 
         div:nth-child(3) {
-            transform: rotate(${props => props.drawerOpened ? 45 : 0}deg) translateX(${props => props.drawerOpened ? -5 : 0}px);
-            height: ${props => props.drawerOpened ? 6 : 3}px;
+            transform: rotate(45deg) translateX(-5px);
+            height: 6px;
+        }
+    }
+
+    .hamburger-button.closed {
+        right: -15px;
+        transform: translateX(100%);
+        background-color: #161B26;
+
+        div {
+            background-color: white;
+        }
+
+        div:nth-child(1) {
+            transform: rotate(0deg) translateX(0px);
+            height: 3px;
+        }
+
+        div:nth-child(2) {
+            transform: rotate(0deg) translateX(0px);
+            opacity: 1;
+        }
+
+        div:nth-child(3) {
+            transform: rotate(0deg) translateX(0px);
+            height: 3px;
         }
     }
 
