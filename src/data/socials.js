@@ -1,20 +1,20 @@
-import {YouTube, GitHub, LinkedIn} from "./../ui/socialsComponents"
+import {YoutubeLogo, GithubLogo, LinkedinLogo} from "../ui/svgs"
 
 const socials = [
     {
-        svgComponent: GitHub,
+        svgComponent: GithubLogo,
         color: "#000000",
         url: "https://github.com/david-dkp",
         socialName: "GitHub"
     },
     {
-        svgComponent: LinkedIn,
+        svgComponent: LinkedinLogo,
         color: "#0A66C1",
         url: "https://www.linkedin.com/in/david-dekeuwer-1940a01b9/",
         socialName: "LinkedIn"
     },
     {
-        svgComponent: YouTube,
+        svgComponent: YoutubeLogo,
         color: "#F50100",
         url: "https://www.youtube.com/channel/UCcRAn1RjQvPQi2K2YFRYihw",
         socialName: "YouTube"
