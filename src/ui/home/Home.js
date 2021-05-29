@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from "styled-components"
-import Presentation from "./Presentation"
+import Landing from "./Landing"
 
 function Home() {
 
     return (
         <Styles>
-            <Presentation/>
+            <Landing/>
         </Styles>
     
     )
