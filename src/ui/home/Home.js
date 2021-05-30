@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import Landing from "./Landing"
+import Presentation from "./Presentation"
 
 function Home() {
   return (
     <Styles>
       <Landing />
+      <Presentation />
     </Styles>
   )
 }
