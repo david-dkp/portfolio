@@ -11,7 +11,7 @@ function Presentation() {
         </h1>
         <p>
           Je suis un jeune développeur spécialisé dans le développement
-          d’applications Android mais suis également interessé dans le
+          d’applications Android et suis également interessé dans le
           développement d’applications Web.
         </p>
       </div>
@@ -22,7 +22,7 @@ function Presentation() {
 const Container = styled.div`
   color: white;
   background-color: #161b26;
-
+  margin-top: 50px;
   .container-text {
     margin: auto;
     width: 90%;
