@@ -6,7 +6,9 @@ import CenterCropImage from "../common/CenterCropImage"
 function AppBox({ app: { image, appName, tags, description } }) {
     return (
         <Container>
-            <CenterCropImage image={image} alt={appName + " image"} />
+            <div className="image-container">
+                <CenterCropImage image={image} alt={appName + " image"} />
+            </div>
             <InfoContainer>
                 <LabelWithTags label={appName} tags={tags} />
                 <p>{description}</p>
@@ -21,6 +23,12 @@ const Container = styled.div`
     flex-direction: column;
     border-radius: 15px;
     transition: all 0.5s ease;
+
+    .image-container {
+        width: 100%;
+        flex: 1;
+        max-height: 120px;
+    }
 
     @media (min-width: 768px) {
         cursor: pointer;

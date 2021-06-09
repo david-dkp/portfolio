@@ -10,10 +10,10 @@ function CenterCropImage({ image, alt }) {
 }
 
 const Container = styled.div`
+    height: 100%;
+    width: 100%;
     position: relative;
-    flex: 1;
     overflow: hidden;
-    max-height: 120px;
 
     img {
         position: absolute;
