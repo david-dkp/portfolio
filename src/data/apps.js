@@ -6,55 +6,118 @@ import CalculItImg from "../assets/projectImages/calcul_it.jpg"
 import ShaRideImg from "../assets/projectImages/ShaRide.jpg"
 
 const apps = [
-  {
-    image: MappartImg,
-    appName: "Mappart",
-    tags: [tags.android],
-    description:
-      "Une application qui facilite la recherche de logements partout dans le monde. Une relation entre acheteur et vendeur plus forte que jamais.",
-  },
-  {
-    image: CryptoWalletAppImg,
-    appName: "Crypter Wallet App",
-    tags: [tags.android, tags.studentProject],
-    description:
-      "Une application de gestion de cryptomonnaire. Effectue, sécurise et encrypte toute vos transactions.",
-  },
-  {
-    image: BillSplitterImg,
-    appName: "Bill Splitter",
-    tags: [tags.web, tags.react, tags.personalProject],
-    description:
-      "Une application de gestion de finance pour des projets ou simplement un repas enre ami.",
-  },
-  {
-    image: CalculItImg,
-    appName: "Calcult It",
-    tags: [tags.android, tags.personalProject],
-    description:
-      "Une calculatrice digital très complète qui permet de calculer, convertir, mesurer et gerer ses comptes !",
-  },
-  {
-    image: ShaRideImg,
-    appName: "ShaRide",
-    tags: [tags.android, tags.studentProject],
-    description:
-      "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
-  },
-  {
-    image: ShaRideImg,
-    appName: "ShaRide",
-    tags: [tags.android, tags.studentProject],
-    description:
-      "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
-  },
-  {
-    image: ShaRideImg,
-    appName: "ShaRide",
-    tags: [tags.android, tags.studentProject],
-    description:
-      "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
-  },
+    {
+        image: MappartImg,
+        appName: "Mappart",
+        tags: [tags.android],
+        description:
+            "Une application qui facilite la recherche de logements partout dans le monde. Une relation entre acheteur et vendeur plus forte que jamais.",
+        technologies: [
+            "MVVM",
+            "Material Design",
+            "RxJava",
+            "Maps SDK",
+            "Retrofit",
+            "Room",
+            "Firebase Auth",
+            "Firebase Firestore",
+            "Places API",
+            "Dagger Hilt",
+            "Glide",
+        ],
+    },
+    {
+        image: CryptoWalletAppImg,
+        appName: "Crypter Wallet App",
+        tags: [tags.android, tags.studentProject],
+        description:
+            "Une application de gestion de cryptomonnaire. Effectue, sécurise et encrypte toute vos transactions.",
+        technologies: [
+            "Firebase Auth",
+            "Firebase Firestore",
+            "Firebase Storage",
+            "Coroutines",
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+        ],
+    },
+    {
+        image: BillSplitterImg,
+        appName: "Bill Splitter",
+        tags: [tags.web, tags.react, tags.personalProject],
+        description:
+            "Une application de gestion de finance pour des projets ou simplement un repas enre ami.",
+        technologies: [
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+        ],
+    },
+    {
+        image: CalculItImg,
+        appName: "Calcult It",
+        tags: [tags.android, tags.personalProject],
+        description:
+            "Une calculatrice digital très complète qui permet de calculer, convertir, mesurer et gerer ses comptes !",
+        technologies: [
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+            "Glide",
+        ],
+    },
+    {
+        image: ShaRideImg,
+        appName: "ShaRide",
+        tags: [tags.android, tags.studentProject],
+        description:
+            "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
+        technologies: [
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+            "Glide",
+        ],
+    },
+    {
+        image: ShaRideImg,
+        appName: "ShaRide",
+        tags: [tags.android, tags.studentProject],
+        description:
+            "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
+        technologies: [
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+            "Glide",
+        ],
+    },
+    {
+        image: ShaRideImg,
+        appName: "ShaRide",
+        tags: [tags.android, tags.studentProject],
+        description:
+            "Une application de covoiturage qui renforce la relation entre les personnes, favorise la rencontre plutot que l’entraide.",
+        technologies: [
+            "DataBinding",
+            "Kotlin Flows",
+            "Koin",
+            "Maps SDK",
+            "Room",
+            "Glide",
+        ],
+    },
 ]
 
 export default apps
