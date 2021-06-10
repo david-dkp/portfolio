@@ -24,14 +24,14 @@ const Container = styled.div`
         font-weight: lighter;
         align-self: flex-end;
         margin-right: 0.2em;
+        margin-left: 0.5em;
     }
 
     .line {
         border-radius: 0px 999px 999px 0px;
         background-color: white;
         height: 3px;
-        width: 90vw;
-        max-width: 17.5em;
+        width: auto;
     }
 `
 
