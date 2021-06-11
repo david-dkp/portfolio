@@ -1,18 +1,36 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 import socials from "./../../data/socials"
 import SocialButton from "./SocialButton"
+import { useMediaQuery } from "react-responsive"
 
 function Navigation() {
     const [drawerOpened, setDrawerOpened] = useState(false)
+
+    const isMobile = useMediaQuery({
+        query: "(max-width: 768px)",
+    })
+
+    const [isOnTop, setOnTop] = useState(true)
+
+    useEffect(() => {
+        if (!isMobile) {
+            document.addEventListener("scroll", (e) => {
+                const scrollTop = window.scrollY
+                console.log(scrollTop)
+                const navOnTop = scrollTop == 0
+                setOnTop(navOnTop)
+            })
+        }
+    }, [isMobile])
 
     const onLinkClickListener = () => {
         setDrawerOpened(false)
     }
 
     return (
-        <Styles drawerOpened={drawerOpened}>
+        <Styles isOnTop={isOnTop} drawerOpened={drawerOpened}>
             <div
                 className="mobile-scrim"
                 onClick={() => setDrawerOpened(false)}
@@ -68,10 +86,12 @@ function Navigation() {
 }
 
 const Styles = styled.div`
+    transition: all 0.5s ease;
     z-index: 1;
     position: fixed;
-    background-color: #161b26;
-    box-shadow: 0px 1px 5px black;
+    background-color: ${({ isOnTop }) =>
+        isOnTop ? "rgba(0, 0, 0, 0)" : "#161b26"};
+    box-shadow: ${({ isOnTop }) => (isOnTop ? "none" : "0px 0px 10px black")};
     top: 0;
 
     .mobile-scrim {
