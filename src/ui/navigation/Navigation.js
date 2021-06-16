@@ -18,9 +18,7 @@ function Navigation() {
         if (!isMobile) {
             document.addEventListener("scroll", (e) => {
                 const scrollTop = window.scrollY
-                console.log(scrollTop)
-                const navOnTop = scrollTop == 0
-                setOnTop(navOnTop)
+                setOnTop(scrollTop === 0)
             })
         }
     }, [isMobile])
@@ -86,7 +84,7 @@ function Navigation() {
 }
 
 const Styles = styled.div`
-    transition: all 0.5s ease;
+    transition: all 0.25s ease;
     z-index: 1;
     position: fixed;
     background-color: ${({ isOnTop }) =>

@@ -1,0 +1,27 @@
+{
+    "forms": {
+        "contactForm": {
+            "name": "Contact form",
+            "fields": {
+                "email": {
+                    "type": "email",
+                    "required": true
+                },
+                "subject": {
+                    "type": "text",
+                    "required": false
+                },
+                "message": {
+                    "type": "text",
+                    "required": true
+                }
+            },
+            "actions": [
+                {
+                    "type": "email",
+                    "to": "david.dekeuwer@gmail.com"
+                }
+            ]
+        }
+    }
+}
