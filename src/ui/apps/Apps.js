@@ -17,6 +17,8 @@ function Apps() {
         document.body.classList.remove("noscroll")
     }
 
+    useEffect(() => () => document.body.classList.remove("noscroll"), [])
+
     return (
         <div>
             <AppsContainer>
