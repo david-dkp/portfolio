@@ -4,9 +4,9 @@ import LabelWithTags from "../common/LabelWithTags"
 import CenterCropImage from "../common/CenterCropImage"
 import GithubLogo from "../svgs/GithubLogo"
 
-function AppProject({ app }) {
+function AppProject({ app, onClick }) {
     return (
-        <Container>
+        <Container onClick={onClick}>
             <div className="image-container">
                 <CenterCropImage image={app.image} />
             </div>
@@ -17,7 +17,16 @@ function AppProject({ app }) {
                 <p className="content technologies-content">
                     {app.technologies.join(", ")}
                 </p>
-                <div className="more-info-button">
+            </div>
+
+            <div className="more-info-container">
+                <div
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        window.open(app.githubUrl)
+                    }}
+                    className="more-info-button"
+                >
                     <div className="more-info-text">Plus d'infos</div>
                     <GithubLogo />
                 </div>
@@ -39,12 +48,14 @@ const Container = styled.div`
     text-align: start;
 
     .image-container {
-        flex-grow: 2;
+        height: 200px;
     }
 
     .info-container {
-        flex-grow: 1;
+        height: 300px;
+        overflow: scroll;
         padding: 30px;
+        padding-bottom: 0px;
         display: inline-flex;
         flex-direction: column;
         gap: 10px;
@@ -54,6 +65,7 @@ const Container = styled.div`
     }
 
     .technologies-title {
+        margin-top: 0.5em;
         font-size: 1.2em;
         font-style: normal;
         font-weight: 400;
@@ -63,21 +75,24 @@ const Container = styled.div`
         font-size: 1em;
     }
 
+    .more-info-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
     .more-info-button {
         align-items: center;
         justify-content: center;
         display: flex;
-        position: absolute;
-        bottom: 30px;
-        margin: auto;
-        left: 0px;
-        right: 0px;
         width: 70%;
         max-width: 250px;
         background-color: #1f273d;
         border-radius: 999px;
         color: white;
         fill: white;
+        position: relative;
         font-size: 20px;
         padding: 0.5em 0em 0.5em 0em;
         box-shadow: 0px 0px 3px black;

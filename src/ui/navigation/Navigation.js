@@ -64,7 +64,6 @@ function Navigation() {
                     <MyNavLink
                         onClick={onLinkClickListener}
                         activeClassName="active-link"
-                        exact
                         to="/apps"
                     >
                         Applications

@@ -3,9 +3,9 @@ import styled from "styled-components"
 import LabelWithTags from "../common/LabelWithTags"
 import CenterCropImage from "../common/CenterCropImage"
 
-function AppBox({ app: { image, appName, tags, description } }) {
+function AppBox({ app: { image, appName, tags, description }, onClick }) {
     return (
-        <Container>
+        <Container onClick={onClick}>
             <div className="image-container">
                 <CenterCropImage image={image} alt={appName + " image"} />
             </div>
