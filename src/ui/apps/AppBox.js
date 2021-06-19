@@ -28,6 +28,7 @@ const Container = styled.div`
         width: 100%;
         flex: 1;
         max-height: 120px;
+        background-color: #161b26;
     }
 
     @media (min-width: 768px) {
