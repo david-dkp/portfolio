@@ -171,6 +171,7 @@ const Styles = styled.div`
     .container {
         position: relative;
         display: flex;
+        justify-content: space-between;
         height: 80px;
         width: 100vw;
     }
@@ -181,7 +182,6 @@ const Styles = styled.div`
         font-size: 1.3em;
         color: white;
         display: flex;
-        margin-left: auto;
         align-items: center;
         justify-content: space-evenly;
         width: 50%;
@@ -192,14 +192,15 @@ const Styles = styled.div`
         margin-left: 40px;
         display: flex;
         gap: 40px;
-        justify-content: space-around;
         align-items: center;
     }
 
     @media (max-width: 768px) {
         .container {
+            gap: 30px;
             position: fixed;
             height: 100vh;
+            max-height: 100vh;
             min-width: 200px;
             width: 60%;
             max-width: 300px;
@@ -220,7 +221,7 @@ const Styles = styled.div`
             margin-top: 70px;
             width: 100%;
             height: fit-content;
-            gap: 50px;
+            gap: 7vh;
             margin-left: 0;
         }
 
@@ -231,6 +232,7 @@ const Styles = styled.div`
             align-self: flex-start;
             align-items: flex-start;
             margin-bottom: 30px;
+            gap: 5vh;
         }
 
         .hamburger-button {
@@ -244,9 +246,6 @@ const Styles = styled.div`
 
     .active-link {
         opacity: 1;
-        &::after {
-            width: 100%auto;
-        }
     }
 
     .active-link::after {
