@@ -4,6 +4,8 @@ import Landing from "./Landing"
 import Presentation from "./Presentation"
 import RecentProjects from "./RecentProjects"
 import Skills from "./skills/Skills"
+import ContactMe from "./ContactMe"
+
 
 function Home() {
   return (
@@ -12,6 +14,7 @@ function Home() {
       <Presentation />
       <Skills />
       <RecentProjects />
+      <ContactMe />
     </Styles>
   )
 }
