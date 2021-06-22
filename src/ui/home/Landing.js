@@ -24,7 +24,7 @@ function Landing() {
 
                 <div className="container-android">
                     <h1 className="text-android">Android</h1>
-                    <AndroidLogo className="logo-android" />
+                    <AndroidLogo fill="#fff" className="logo-android" />
                 </div>
             </div>
         </Container>
