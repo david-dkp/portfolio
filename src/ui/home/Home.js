@@ -5,6 +5,7 @@ import Presentation from "./Presentation"
 import RecentProjects from "./RecentProjects"
 import Skills from "./skills/Skills"
 import ContactMe from "./ContactMe"
+import Footer from "./Footer"
 
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
       <Skills />
       <RecentProjects />
       <ContactMe />
+      <Footer />
     </Styles>
   )
 }

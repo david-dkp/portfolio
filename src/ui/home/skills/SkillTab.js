@@ -24,8 +24,8 @@ const Container = styled.div`
     background-color: ${({selected}) => selected ? "white" : "#B7B7B7"};
 
     svg {   
-        width: 2.2em;
-        height: 2.2em;
+        width: 2.3em;
+        height: 2.3em;
         fill: ${({logoColor}) => logoColor}
     }
 

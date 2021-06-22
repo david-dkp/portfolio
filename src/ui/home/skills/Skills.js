@@ -16,7 +16,7 @@ function Skills() {
         <div className="skills-container">
           <div className="skills-tab">
             {skills.map((skill, index) => {
-                return <SkillTab onClick={(e) => setSelectedSkill(skill)} skill={skill} key={index} selected={selectedSkill == skill} />
+                return <SkillTab onClick={(e) => setSelectedSkill(skill)} skill={skill} key={index} selected={selectedSkill === skill} />
             })}
           </div>
           <div className="skills-content">

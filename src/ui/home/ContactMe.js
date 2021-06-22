@@ -26,8 +26,15 @@ const Container = styled.div`
     color: white;
 
     p {
+        width: 90vw;
         max-width: 800px;
         font-size: 2.5em;
+    }
+
+    @media (max-width: 768px) {
+        p {
+            font-size: 2.2em;
+        }
     }
 `
 
