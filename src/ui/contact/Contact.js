@@ -125,7 +125,7 @@ const Container = styled.div`
 
         .error-text.email {
             margin-bottom: ${({ showEmailError }) =>
-                showEmailError ? "0.3em" : "-1em"};
+                showEmailError ? "0.3em" : "-1.1em"};
         }
 
         .error-text.message {

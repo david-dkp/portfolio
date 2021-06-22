@@ -5,33 +5,26 @@ function Header({ title }) {
     return (
         <Container>
             <h1 className="title">{title}</h1>
-            <div className="line" />
         </Container>
     )
 }
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-    font-size: 20px;
-
     .title {
+        text-align: center;
         font-weight: lighter;
-        align-self: flex-end;
-        margin-right: 0.2em;
-        margin-left: 0.5em;
+        font-size: 4rem;
+        margin: 0em 1em;
     }
 
-    .line {
-        border-radius: 0px 999px 999px 0px;
-        background-color: white;
-        height: 3px;
-        width: auto;
+    @media (max-width: 768px) {
+        .title {
+            font-size: 3.7rem;
+        }
     }
 `
 
