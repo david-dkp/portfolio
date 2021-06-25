@@ -6,6 +6,7 @@ import RecentProjects from "./RecentProjects"
 import Skills from "./skills/Skills"
 import ContactMe from "./ContactMe"
 import Footer from "./Footer"
+import DownloadCv from "./DownloadCv"
 
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
       <Presentation />
       <Skills />
       <RecentProjects />
+      <DownloadCv />
       <ContactMe />
       <Footer />
     </Styles>

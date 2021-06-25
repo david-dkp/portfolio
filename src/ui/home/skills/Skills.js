@@ -21,7 +21,7 @@ function Skills() {
           </div>
           <div className="skills-content">
             <div className="skills-technologies">
-                {selectedSkill.technologies.sort((a, b) => b.level - a.level).map((technology, index) => <Technology technology={technology} />)}
+                {selectedSkill.technologies.sort((a, b) => b.level - a.level).map((technology, index) => <Technology key={index} technology={technology} />)}
             </div>
           </div>
         </div>

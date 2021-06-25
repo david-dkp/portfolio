@@ -114,12 +114,17 @@ const Container = styled.div`
         flex-direction: column;
         height: auto;
 
+        .profile-image {
+            min-width: 80vw;
+        }
+
         .container-text {
             transform: translateY(-3em);
         }
     }
 
     @media (max-width: 504px) {
+
         .text-developer span {
             margin-left: 3em;
         }
