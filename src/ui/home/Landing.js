@@ -12,6 +12,7 @@ function Landing() {
                 className="profile-image"
                 src={ProfileImage}
                 alt="Me standing"
+                loading="eager"
             />
             <div className="container-text">
                 <div className="container-name">
@@ -39,6 +40,7 @@ const Container = styled.div`
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+
     .container-text {
         display: flex;
         flex-direction: column;
