@@ -84,7 +84,7 @@ function Navigation() {
 
 const Styles = styled.div`
     transition: all 0.25s ease;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     background-color: ${({ isOnTop }) =>
         isOnTop ? "rgba(0, 0, 0, 0)" : "#161b26"};
