@@ -3,4 +3,4 @@ export { default as LinkedinLogo } from "./LinkedinLogo"
 export { default as YoutubeLogo } from "./YoutubeLogo"
 export { default as AndroidLogo } from "./AndroidLogo"
 export { default as WebLogo } from "./WebLogo"
-
+export { default as PhoneLogo } from "./PhoneLogo"
