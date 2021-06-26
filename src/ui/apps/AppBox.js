@@ -2,10 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import LabelWithTags from "../common/LabelWithTags"
 import CenterCropImage from "../common/CenterCropImage"
+import { Link } from "react-router-dom"
 
-function AppBox({ app: { image, appName, tags, description }, onClick }) {
+function AppBox({ app: { id, image, appName, tags, description } }) {
     return (
-        <Container onClick={onClick}>
+        <Container to={`/apps/${id}`}>
             <div className="image-container">
                 <CenterCropImage image={image} alt={appName + " image"} />
             </div>
@@ -17,7 +18,8 @@ function AppBox({ app: { image, appName, tags, description }, onClick }) {
     )
 }
 
-const Container = styled.div`
+const Container = styled(Link)`
+    text-decoration: none;
     overflow: hidden;
     display: flex;
     flex-direction: column;

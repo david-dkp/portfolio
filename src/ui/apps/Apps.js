@@ -23,15 +23,7 @@ function Apps() {
         <div>
             <AppsContainer>
                 {apps.map((app, index) => {
-                    return (
-                        <AppBox
-                            onClick={() => {
-                                history.replace(`/apps/${app.id}`)
-                            }}
-                            app={app}
-                            key={index}
-                        />
-                    )
+                    return <AppBox app={app} key={index} />
                 })}
             </AppsContainer>
 
