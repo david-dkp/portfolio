@@ -20,6 +20,7 @@ function RecentProjects() {
                     className="see-more-container"
                     onClick={() => history.push("/apps")}
                 >
+                    <div className="see-more-background" />
                     <div className="logo">
                         <div className="first" />
                         <div className="second" />
@@ -56,6 +57,8 @@ const Container = styled.div`
     }
 
     .see-more-container {
+        overflow: hidden;
+        position: relative;
         width: 300px;
         height: 300px;
         border: 1px solid white;
@@ -68,6 +71,24 @@ const Container = styled.div`
         font-size: 3rem;
         color: white;
         transition: all 0.5s ease;
+        cursor: pointer;
+
+        * {
+            z-index: 1;
+        }
+
+        .see-more-background {
+            position: absolute;
+            border-radius: 999px;
+            width: 0%;
+            height: 0%;
+            bottom: 0px;
+            left: 0px;
+            transform: translate(-50%, 50%);
+            background-color: white;
+            z-index: 0;
+            transition: all 0.2s linear;
+        }
 
         .logo {
             position: relative;
@@ -103,12 +124,15 @@ const Container = styled.div`
                 Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
                 sans-serif;
         }
-
     }
 
     .see-more-container:hover {
-        background-color: white;
         color: black;
+
+        .see-more-background {
+            width: 300%;
+            height: 300%;
+        }
 
         .logo div {
             background-color: black;

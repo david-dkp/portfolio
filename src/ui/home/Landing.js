@@ -36,10 +36,9 @@ const Container = styled.div`
     align-self: center;
     width: 90%;
     max-width: 1100px;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
-
     .container-text {
         display: flex;
         flex-direction: column;
@@ -95,7 +94,7 @@ const Container = styled.div`
         flex-shrink: 1;
         object-fit: cover;
         max-width: 550px;
-        min-width: 400px;
+        min-width: 425px;
     }
 
     @media (max-width: 1030px) {

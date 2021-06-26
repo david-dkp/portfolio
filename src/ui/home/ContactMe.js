@@ -1,15 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-
+import React from "react"
+import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 function ContactMe() {
-
-
     return (
         <Container>
+            <div className="line" />
             <p>Vous avez une application à développer ?</p>
-            <ContactMeButton to="/contact" >Contactez-moi</ContactMeButton>
+            <ContactMeButton to="/contact">Contactez-moi</ContactMeButton>
         </Container>
     )
 }
@@ -17,6 +15,7 @@ function ContactMe() {
 export default ContactMe
 
 const Container = styled.div`
+    position: relative;
     padding: 100px 0px;
     display: flex;
     flex-direction: column;
@@ -24,6 +23,15 @@ const Container = styled.div`
     font-size: 20px;
     align-items: center;
     color: white;
+
+    .line {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 1px;
+        width: 100vw;
+        background-color: black;
+    }
 
     p {
         width: 90vw;

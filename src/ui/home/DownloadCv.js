@@ -1,15 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 import cvpdf from "../../assets/cv_david_dekeuwer.pdf"
 
-
-
 function DownloadCv() {
-
-
     return (
         <Container>
-            <DownloadButton href={cvpdf} target="_blank">Consulter mon CV</DownloadButton>   
+            <DownloadButton href={cvpdf} target="_blank">
+                Consulter mon CV
+            </DownloadButton>
         </Container>
     )
 }
@@ -19,7 +17,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    padding: 2em 1em 0px 1em;
+    padding: 2em 1em;
 `
 
 const DownloadButton = styled.a`

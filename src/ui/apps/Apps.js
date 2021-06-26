@@ -50,7 +50,7 @@ function Apps() {
 const AppsContainer = styled.div`
     position: relative;
     padding-top: 110px;
-    width: 80vw;
+    width: 75vw;
     max-width: 1300px;
     min-height: 100vh;
     left: 50%;
