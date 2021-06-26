@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import styled from "styled-components"
-import Header from "../Header"
+import Header from "../../common/Header"
 import skills from "../../../data/skills"
 import SkillTab from "./SkillTab"
 import Technology from "./Technology"

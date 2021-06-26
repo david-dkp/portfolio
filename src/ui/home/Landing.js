@@ -94,7 +94,7 @@ const Container = styled.div`
     .profile-image {
         flex-shrink: 1;
         object-fit: cover;
-        max-width: 25vw;
+        max-width: 550px;
         min-width: 400px;
     }
 
@@ -115,7 +115,7 @@ const Container = styled.div`
         height: auto;
 
         .profile-image {
-            min-width: 80vw;
+            width: 80vw;
         }
 
         .container-text {
@@ -124,7 +124,6 @@ const Container = styled.div`
     }
 
     @media (max-width: 504px) {
-
         .text-developer span {
             margin-left: 3em;
         }
