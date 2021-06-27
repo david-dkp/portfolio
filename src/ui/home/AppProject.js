@@ -1,13 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import LabelWithTags from "../common/LabelWithTags"
 import CenterCropImage from "../common/CenterCropImage"
 import GithubLogo from "../svgs/GithubLogo"
+import ImageViewer from "../common/ImageViewer"
 
 function AppProject({ app, onClick }) {
+    const [showImage, setShowImage] = useState(false)
+
     return (
         <Container onClick={onClick}>
-            <div className="image-container">
+            <div className="image-container" onClick={() => setShowImage(true)}>
                 <CenterCropImage image={app.image} />
             </div>
             <div className="info-container">
@@ -31,6 +34,12 @@ function AppProject({ app, onClick }) {
                     <GithubLogo />
                 </div>
             </div>
+
+            <ImageViewer
+                src={app.image}
+                show={showImage}
+                onClick={() => setShowImage(false)}
+            />
         </Container>
     )
 }
