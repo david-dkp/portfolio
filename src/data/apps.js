@@ -1,6 +1,7 @@
 import tags from "./tags"
 import Go4LunchImage from "../assets/projectImages/go4lunch-image.png"
 import RealEstateManagerImage from "../assets/projectImages/realestatemanager-image.png"
+import WebsiteImage from "../assets/projectImages/website-image.png"
 
 const apps = [
     {
@@ -57,7 +58,7 @@ const apps = [
     },
     {
         id: "my-website",
-        image: null,
+        image: WebsiteImage,
         appName: "Mon site internet",
         tags: [tags.web, tags.react, tags.personalProject],
         description:
