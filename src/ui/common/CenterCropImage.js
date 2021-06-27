@@ -2,11 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 function CenterCropImage({ image, alt }) {
-    return (
-        <Container>
-            <img loading="lazy" src={image} alt={alt} />
-        </Container>
-    )
+    return <Container image={image} />
 }
 
 const Container = styled.div`
@@ -15,16 +11,10 @@ const Container = styled.div`
     position: relative;
     overflow: hidden;
 
-    img {
-        position: absolute;
-        left: -1000%;
-        right: -1000%;
-        top: -1000%;
-        bottom: -1000%;
-        margin: auto;
-        min-height: 100%;
-        min-width: 100%;
-    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(${({ image }) => image});
+    background-size: cover;
 `
 
 export default CenterCropImage
