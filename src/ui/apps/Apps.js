@@ -82,6 +82,7 @@ const AppContainer = styled.div`
     justify-content: center;
     overflow: scroll;
     animation: 250ms ${fadeIn};
+    z-index: 6;
 
     @media (min-height: 600px) {
         align-items: center;

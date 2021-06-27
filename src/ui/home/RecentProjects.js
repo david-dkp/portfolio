@@ -13,8 +13,8 @@ function RecentProjects() {
             <Header title="Mes projets récents" />
             <div className="subcontainer">
                 <div className="projects-container">
-                    <AppProject app={apps[2]} />
-                    <AppProject app={apps[3]} />
+                    <AppProject app={apps[0]} />
+                    <AppProject app={apps[1]} />
                 </div>
                 <div
                     className="see-more-container"

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import LabelWithTags from "../common/LabelWithTags"
 import CenterCropImage from "../common/CenterCropImage"
@@ -12,6 +12,9 @@ function AppProject({ app, onClick }) {
         <Container onClick={onClick}>
             <div className="image-container" onClick={() => setShowImage(true)}>
                 <CenterCropImage image={app.image} />
+                <div className="see-fullscreen-container">
+                    Voir en pleine écran
+                </div>
             </div>
             <div className="info-container">
                 <LabelWithTags label={app.appName} tags={app.tags} />
@@ -57,7 +60,34 @@ const Container = styled.div`
     text-align: start;
 
     .image-container {
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            .see-fullscreen-container {
+                opacity: 1;
+            }
+        }
+
         height: 200px;
+
+        .see-fullscreen-container {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
     }
 
     .info-container {

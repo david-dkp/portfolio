@@ -1,11 +1,15 @@
-import React, { useState } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 function ImageViewer({ src, alt, show, onClick }) {
     if (!show) return null
 
+    const handleOnClick = (e) => {
+        onClick()
+    }
+
     return (
-        <Container onClick={onClick}>
+        <Container onClick={handleOnClick}>
             <img src={src} alt={alt} />
         </Container>
     )
