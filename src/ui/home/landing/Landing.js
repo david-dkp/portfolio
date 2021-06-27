@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import ProfileImage from "../../assets/self_picture.png"
-import { AndroidLogo } from "../svgs"
+import ProfileImage from "../../../assets/self_picture.png"
+import { AndroidLogo } from "../../common/svgs"
 
 function Landing() {
     return (

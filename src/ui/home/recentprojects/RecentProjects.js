@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
-import AppProject from "./AppProject"
-import apps from "../../data/apps"
+import AppProject from "../../common/AppProject"
+import apps from "../../../data/apps"
 import { useHistory } from "react-router-dom"
 
 function RecentProjects() {

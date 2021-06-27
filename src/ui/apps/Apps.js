@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 import AppBox from "./AppBox"
-import AppProject from "../home/AppProject"
+import AppProject from "../common/AppProject"
 import apps from "./../../data/apps"
 import { useParams, useHistory } from "react-router-dom"
 

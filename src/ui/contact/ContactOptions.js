@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import ContactOption from "./ContactOption"
-import { PhoneLogo, LinkedinLogo } from "../svgs"
+import { PhoneLogo, LinkedinLogo } from "../common/svgs"
 
 function ContactOptions() {
     return (

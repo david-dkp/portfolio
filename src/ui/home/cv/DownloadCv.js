@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import cvpdf from "../../assets/cv_david_dekeuwer.pdf"
+import cvpdf from "../../../assets/cv_david_dekeuwer.pdf"
 
 function DownloadCv() {
     return (

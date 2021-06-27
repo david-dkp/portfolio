@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import LabelWithTags from "../common/LabelWithTags"
-import CenterCropImage from "../common/CenterCropImage"
-import GithubLogo from "../svgs/GithubLogo"
-import ImageViewer from "../common/ImageViewer"
+import LabelWithTags from "./LabelWithTags"
+import CenterCropImage from "./CenterCropImage"
+import GithubLogo from "./svgs/GithubLogo"
+import ImageViewer from "./ImageViewer"
 
 function AppProject({ app, onClick }) {
     const [showImage, setShowImage] = useState(false)
