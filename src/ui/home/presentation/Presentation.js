@@ -13,7 +13,8 @@ function Presentation() {
                     Je suis un jeune développeur spécialisé dans le
                     développement d’applications Android mais j'étends également
                     mes compétences sur le développement Web. Je suis passioné
-                    par ce que je fais
+                    par ce que je fais et ce serait un plaisir de concrêtiser
+                    vos idées.
                 </p>
             </div>
         </Container>
