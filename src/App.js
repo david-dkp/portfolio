@@ -7,6 +7,7 @@ import Contact from "./ui/contact/Contact"
 import Aos from "aos"
 import { FormspreeProvider } from "@formspree/react"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
+import ScrollToTop from "./ui/common/ScrollToTop"
 
 function App() {
     useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
         <FormspreeProvider project="1701476863047630380">
             <div className="App">
                 <Router>
+                    <ScrollToTop />
                     <Navigation />
                     <Switch>
                         <Route exact path="/" component={Home} />

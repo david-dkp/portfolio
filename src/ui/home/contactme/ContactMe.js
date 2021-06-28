@@ -7,7 +7,15 @@ function ContactMe() {
         <Container>
             <div className="line" />
             <p>Vous avez une application à développer ?</p>
-            <ContactMeButton to="/contact">Contactez-moi</ContactMeButton>
+            <ContactMeButton
+                data-aos="fade-in"
+                data-aos-duration="1500"
+                data-aos-easing="ease"
+                data-aos-delay="250"
+                to="/contact"
+            >
+                Contactez-moi
+            </ContactMeButton>
         </Container>
     )
 }
@@ -40,9 +48,7 @@ const Container = styled.section`
     }
 
     @media (max-width: 768px) {
-        p {
-            font-size: 2.2em;
-        }
+        font-size: 17px;
     }
 `
 

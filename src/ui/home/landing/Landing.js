@@ -7,6 +7,7 @@ function Landing() {
     return (
         <Container>
             <img
+                data-aos-once="true"
                 data-aos="fade-up"
                 data-aos-duration="1500"
                 className="profile-image"
@@ -19,6 +20,7 @@ function Landing() {
                     <h3
                         data-aos-duration="1000"
                         data-aos-delay="1000"
+                        data-aos-once="true"
                         data-aos="slide-up"
                         className="text-name"
                     >
@@ -27,6 +29,7 @@ function Landing() {
                 </div>
 
                 <h2
+                    data-aos-once="true"
                     data-aos-duration="1000"
                     data-aos="fade-left"
                     data-aos-delay="500"
@@ -36,6 +39,7 @@ function Landing() {
                 </h2>
 
                 <div
+                    data-aos-once="true"
                     data-aos-duration="1000"
                     data-aos="fade-left"
                     data-aos-delay="500"
@@ -58,6 +62,7 @@ const Container = styled.section`
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-x: hidden;
 
     .container-text {
         flex: 1 0 0px;
