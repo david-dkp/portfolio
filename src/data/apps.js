@@ -62,7 +62,7 @@ const apps = [
         appName: "Mon site internet",
         tags: [tags.web, tags.react, tags.personalProject],
         description:
-            "Développer mon propre site internet m'a beaucoup appris sur le développement Web.",
+            "Un site internet simple et minimaliste pour me présenter et présenter les projets sur lesquels j'ai travaillé.",
         technologies: [
             "HTML",
             "CSS",

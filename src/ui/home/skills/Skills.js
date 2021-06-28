@@ -41,7 +41,7 @@ function Skills() {
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     margin-top: 70px;
     display: flex;
     flex-direction: column;

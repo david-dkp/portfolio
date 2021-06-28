@@ -5,7 +5,7 @@ import AppTag from "./AppTag"
 function LabelWithTags({ label, tags }) {
     return (
         <Container>
-            <h2>{label}</h2>
+            <h4>{label}</h4>
             <div className="tags-container">
                 {tags.map((tag, index) => {
                     return <AppTag tag={tag} key={index} />
@@ -21,7 +21,7 @@ const Container = styled.div`
     align-items: center;
     gap: 0.5em;
 
-    h2 {
+    h4 {
         font-weight: 400;
         font-size: 1.3em;
         font-family: Arial, Helvetica, sans-serif;

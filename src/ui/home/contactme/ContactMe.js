@@ -14,7 +14,7 @@ function ContactMe() {
 
 export default ContactMe
 
-const Container = styled.div`
+const Container = styled.section`
     position: relative;
     padding: 100px 0px;
     display: flex;

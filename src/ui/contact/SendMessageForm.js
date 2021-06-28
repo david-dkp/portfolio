@@ -35,7 +35,7 @@ function SendMessageForm() {
             showEmailError={!state.submitting && showEmailError}
             showMessageError={!state.submitting && showMessageError}
         >
-            <h1 className="title">Envoyez-moi un message</h1>
+            <h2 className="title">Envoyez-moi un message</h2>
             <form method="post" onSubmit={handleFormSubmit}>
                 {state.succeeded && (
                     <h1 className="sent-message">Le message a été envoyé</h1>
@@ -103,7 +103,7 @@ const growingBall = keyframes`
 }
 `
 
-const Container = styled.div`
+const Container = styled.section`
     max-width: 600px;
     text-align: center;
     color: white;

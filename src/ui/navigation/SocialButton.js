@@ -11,24 +11,26 @@ function SocialButton({ svgComponent, color, socialName, url }) {
     }, [socialWidth, socialName])
 
     return (
-        <Styles
+        <Container
             socialWidth={socialWidth}
             color={color}
-            onClick={() => window.open(url)}
+            href={url}
+            target="_blank"
         >
             {svgComponent()}
             <div className="social-name-container">
                 <h1 id={socialName}>{socialName}</h1>
             </div>
-        </Styles>
+        </Container>
     )
 }
 
-const Styles = styled.div`
+const Container = styled.a`
+    text-decoration: none;
+    color: black;
     transition: all 0.5s ease;
     padding: 5px;
     display: flex;
-    cursor: pointer;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 7px;
     align-items: center;

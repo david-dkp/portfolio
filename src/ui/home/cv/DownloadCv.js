@@ -12,7 +12,7 @@ function DownloadCv() {
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,6 @@ const DownloadButton = styled.a`
     border-radius: 15px;
     border: 1px solid white;
     transition: all 0.5s ease;
-    cursor: pointer;
     text-decoration: none;
     color: white;
 

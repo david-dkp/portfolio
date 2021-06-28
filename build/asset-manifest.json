@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb6eef7c.chunk.css",
-    "main.js": "/static/js/main.b3bb5d99.chunk.js",
-    "main.js.map": "/static/js/main.b3bb5d99.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.00c0be3b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.00c0be3b.js.map",
+    "main.css": "/static/css/main.76bf62e2.chunk.css",
+    "main.js": "/static/js/main.32dbab89.chunk.js",
+    "main.js.map": "/static/js/main.32dbab89.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c19085e2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c19085e2.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.3d6b0fae.chunk.js": "/static/js/2.3d6b0fae.chunk.js",
-    "static/js/2.3d6b0fae.chunk.js.map": "/static/js/2.3d6b0fae.chunk.js.map",
-    "static/js/3.5edaf992.chunk.js": "/static/js/3.5edaf992.chunk.js",
-    "static/js/3.5edaf992.chunk.js.map": "/static/js/3.5edaf992.chunk.js.map",
+    "static/js/2.406da58a.chunk.js": "/static/js/2.406da58a.chunk.js",
+    "static/js/2.406da58a.chunk.js.map": "/static/js/2.406da58a.chunk.js.map",
+    "static/js/3.0e7bdced.chunk.js": "/static/js/3.0e7bdced.chunk.js",
+    "static/js/3.0e7bdced.chunk.js.map": "/static/js/3.0e7bdced.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.fb6eef7c.chunk.css.map": "/static/css/main.fb6eef7c.chunk.css.map",
-    "static/js/2.3d6b0fae.chunk.js.LICENSE.txt": "/static/js/2.3d6b0fae.chunk.js.LICENSE.txt",
-    "static/media/ShaRide.75576b79.jpg": "/static/media/ShaRide.75576b79.jpg",
-    "static/media/bill_splitter.d5037480.jpg": "/static/media/bill_splitter.d5037480.jpg",
-    "static/media/calcul_it.90586976.jpg": "/static/media/calcul_it.90586976.jpg",
-    "static/media/self_picture.136a6783.png": "/static/media/self_picture.136a6783.png"
+    "static/css/main.76bf62e2.chunk.css.map": "/static/css/main.76bf62e2.chunk.css.map",
+    "static/js/2.406da58a.chunk.js.LICENSE.txt": "/static/js/2.406da58a.chunk.js.LICENSE.txt",
+    "static/media/cv_david_dekeuwer.301257f9.pdf": "/static/media/cv_david_dekeuwer.301257f9.pdf",
+    "static/media/go4lunch-image.4e551cc1.png": "/static/media/go4lunch-image.4e551cc1.png",
+    "static/media/realestatemanager-image.5302c8fe.png": "/static/media/realestatemanager-image.5302c8fe.png",
+    "static/media/self-picture.0a722483.png": "/static/media/self-picture.0a722483.png",
+    "static/media/website-image.06be502c.png": "/static/media/website-image.06be502c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.00c0be3b.js",
+    "static/js/runtime-main.c19085e2.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.3d6b0fae.chunk.js",
-    "static/css/main.fb6eef7c.chunk.css",
-    "static/js/main.b3bb5d99.chunk.js"
+    "static/js/2.406da58a.chunk.js",
+    "static/css/main.76bf62e2.chunk.css",
+    "static/js/main.32dbab89.chunk.js"
   ]
 }

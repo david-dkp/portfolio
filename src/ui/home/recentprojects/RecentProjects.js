@@ -3,11 +3,9 @@ import styled from "styled-components"
 import Header from "../common/Header"
 import AppProject from "../../common/AppProject"
 import apps from "../../../data/apps"
-import { useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function RecentProjects() {
-    const history = useHistory()
-
     return (
         <Container>
             <Header title="Mes projets récents" />
@@ -16,23 +14,20 @@ function RecentProjects() {
                     <AppProject app={apps[0]} />
                     <AppProject app={apps[1]} />
                 </div>
-                <div
-                    className="see-more-container"
-                    onClick={() => history.push("/apps")}
-                >
+                <Link className="see-more-container" to="/apps">
                     <div className="see-more-background" />
                     <div className="logo">
                         <div className="first" />
                         <div className="second" />
                     </div>
                     <div className="text">Voir plus</div>
-                </div>
+                </Link>
             </div>
         </Container>
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     align-items: center;
     position: relative;
     display: flex;
@@ -57,6 +52,7 @@ const Container = styled.div`
     }
 
     .see-more-container {
+        text-decoration: none;
         overflow: hidden;
         position: relative;
         width: 300px;
@@ -71,7 +67,6 @@ const Container = styled.div`
         font-size: 3rem;
         color: white;
         transition: all 0.5s ease;
-        cursor: pointer;
 
         * {
             z-index: 1;

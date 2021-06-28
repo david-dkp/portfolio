@@ -51,32 +51,41 @@ function Navigation() {
                         <SocialButton key={i} {...social} />
                     ))}
                 </div>
+                <nav>
+                    <ul className="links-container">
+                        <li>
+                            <MyNavLink
+                                onClick={onLinkClickListener}
+                                activeClassName="active-link"
+                                exact
+                                to="/"
+                            >
+                                Accueil
+                            </MyNavLink>
+                        </li>
 
-                <div className="links-container">
-                    <MyNavLink
-                        onClick={onLinkClickListener}
-                        activeClassName="active-link"
-                        exact
-                        to="/"
-                    >
-                        Accueil
-                    </MyNavLink>
-                    <MyNavLink
-                        onClick={onLinkClickListener}
-                        activeClassName="active-link"
-                        to="/apps"
-                    >
-                        Applications
-                    </MyNavLink>
-                    <MyNavLink
-                        onClick={onLinkClickListener}
-                        activeClassName="active-link"
-                        exact
-                        to="/contact"
-                    >
-                        Contact
-                    </MyNavLink>
-                </div>
+                        <li>
+                            <MyNavLink
+                                onClick={onLinkClickListener}
+                                activeClassName="active-link"
+                                to="/apps"
+                            >
+                                Applications
+                            </MyNavLink>
+                        </li>
+
+                        <li>
+                            <MyNavLink
+                                onClick={onLinkClickListener}
+                                activeClassName="active-link"
+                                exact
+                                to="/contact"
+                            >
+                                Contact
+                            </MyNavLink>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </Styles>
     )
@@ -176,6 +185,11 @@ const Styles = styled.div`
         width: 100vw;
     }
 
+    nav {
+        width: 50%;
+        height: 100%;
+    }
+
     .links-container {
         font-family: Arial, Helvetica, sans-serif;
         position: relative;
@@ -184,8 +198,8 @@ const Styles = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 50%;
         height: 100%;
+        list-style-type: none;
     }
 
     .socials-container {
@@ -257,7 +271,6 @@ const MyNavLink = styled(NavLink)`
     position: relative;
     text-decoration: none;
     user-select: none;
-
     color: white;
     opacity: 0.5;
     transition: all 0.5s ease;

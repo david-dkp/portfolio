@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ProfileImage from "../../../assets/self_picture.png"
+import ProfileImage from "../../../assets/self-picture.png"
 import { AndroidLogo } from "../../common/svgs"
 
 function Landing() {
@@ -11,20 +11,37 @@ function Landing() {
                 data-aos-duration="1500"
                 className="profile-image"
                 src={ProfileImage}
-                alt="Me standing"
+                alt="Moi avec les bras croisés"
                 loading="eager"
             />
             <div className="container-text">
-                <div className="container-name">
-                    <p className="text-name">David Dekeuwer</p>
+                <div className="name-container">
+                    <h3
+                        data-aos-duration="1000"
+                        data-aos-delay="1000"
+                        data-aos="slide-up"
+                        className="text-name"
+                    >
+                        David Dekeuwer
+                    </h3>
                 </div>
 
-                <h2 className="text-developer">
-                    Développeur <span>d'application</span>
+                <h2
+                    data-aos-duration="1000"
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="text-developer"
+                >
+                    Développeur <span>d'applications</span>
                 </h2>
 
-                <div className="container-android">
-                    <h1 className="text-android">Android</h1>
+                <div
+                    data-aos-duration="1000"
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="container-android"
+                >
+                    <h2 className="text-android">Android</h2>
                     <AndroidLogo fill="#fff" className="logo-android" />
                 </div>
             </div>
@@ -32,21 +49,22 @@ function Landing() {
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     align-self: center;
-    width: 90%;
+    width: 85%;
     max-width: 1100px;
     min-height: 100vh;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
 
     .container-text {
+        flex: 1 0 0px;
         display: flex;
         flex-direction: column;
         margin-top: 10%;
         color: white;
-        flex-grow: 1;
         align-self: center;
         text-align: start;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -54,13 +72,15 @@ const Container = styled.div`
         font-size: 14px;
     }
 
-    .container-name {
-        transform: translateY(0.8em);
-        .text-name {
-            font-style: normal;
-            font-size: 2.2em;
-            font-weight: lighter;
-        }
+    .name-container {
+        overflow: hidden;
+        margin-bottom: -0.7em;
+    }
+
+    .text-name {
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 2.2em;
     }
 
     .text-developer {
@@ -73,7 +93,7 @@ const Container = styled.div`
         align-items: center;
         margin-top: 0.3em;
         align-self: flex-end;
-        font-size: 2.7em;
+        font-size: 3em;
 
         .text-android {
             font-weight: normal;
@@ -93,10 +113,10 @@ const Container = styled.div`
     }
 
     .profile-image {
-        flex-shrink: 1;
+        flex: 1 1 0;
         object-fit: cover;
         max-width: 550px;
-        min-width: 425px;
+        min-width: 400px;
     }
 
     @media (max-width: 1030px) {
@@ -105,26 +125,7 @@ const Container = styled.div`
         }
     }
 
-    @media (max-width: 948px) and (min-width: 769px) {
-        .text-developer span {
-            margin-left: 3em;
-        }
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        height: auto;
-
-        .profile-image {
-            width: 80vw;
-        }
-
-        .container-text {
-            transform: translateY(-3em);
-        }
-    }
-
-    @media (max-width: 504px) {
+    @media (max-width: 553px) {
         .text-developer span {
             margin-left: 3em;
         }

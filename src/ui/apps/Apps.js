@@ -6,6 +6,10 @@ import apps from "./../../data/apps"
 import { useParams, useHistory } from "react-router-dom"
 
 function Apps() {
+    useEffect(() => {
+        document.title = "Mes applications Android et Web"
+    }, [])
+
     const history = useHistory()
     const params = useParams()
 
@@ -39,7 +43,7 @@ function Apps() {
     )
 }
 
-const AppsContainer = styled.div`
+const AppsContainer = styled.section`
     position: relative;
     padding-top: 110px;
     width: 75vw;

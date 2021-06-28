@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import SendMessageForm from "./SendMessageForm"
 import OrSeparator from "./OrSeparator"
 import ContactOptions from "./ContactOptions"
 
 function Contact() {
+    useEffect(() => {
+        document.title = "Comment me contacter ?"
+    }, [])
+
     return (
         <Container>
             <div className="sub-container">

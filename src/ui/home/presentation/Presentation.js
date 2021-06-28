@@ -5,21 +5,22 @@ function Presentation() {
     return (
         <Container>
             <div className="container-text">
-                <h1>
+                <h3>
                     Bonjour, moi c’est David. <br />
                     Ravi de faire votre connaissance.
-                </h1>
+                </h3>
                 <p>
                     Je suis un jeune développeur spécialisé dans le
-                    développement d’applications Android et suis également
-                    interessé dans le développement d’applications Web.
+                    développement d’applications Android mais j'étends également
+                    mes compétences sur le développement Web. Je suis passioné
+                    par ce que je fais
                 </p>
             </div>
         </Container>
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     color: white;
     background-color: #161b26;
     margin-top: 50px;
@@ -33,7 +34,7 @@ const Container = styled.div`
         margin-bottom: 3em;
         font-family: Arial, Helvetica, sans-serif;
 
-        h1 {
+        h3 {
             font-size: 1em;
         }
 

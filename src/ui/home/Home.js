@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Landing from "./landing/Landing"
 import Presentation from "./presentation/Presentation"
@@ -9,6 +9,11 @@ import Footer from "./footer/Footer"
 import DownloadCv from "./cv/DownloadCv"
 
 function Home() {
+    useEffect(() => {
+        document.title =
+            "David Dekeuwer, développeur d'applications Android - Mon site Web - Mon portfolio"
+    }, [])
+
     return (
         <Styles>
             <Landing />

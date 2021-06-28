@@ -4,7 +4,7 @@ import styled from "styled-components"
 function Header({ title }) {
     return (
         <Container>
-            <h1 className="title">{title}</h1>
+            <h2 className="title">{title}</h2>
         </Container>
     )
 }

@@ -6,7 +6,7 @@ import { PhoneLogo, LinkedinLogo } from "../common/svgs"
 function ContactOptions() {
     return (
         <Container>
-            <div className="header-title">Contactez-moi</div>
+            <h2 className="header-title">Contactez-moi</h2>
             <div className="options-container">
                 <ContactOption
                     title="Par téléphone"
@@ -28,7 +28,7 @@ function ContactOptions() {
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;

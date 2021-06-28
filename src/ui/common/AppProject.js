@@ -19,23 +19,22 @@ function AppProject({ app, onClick }) {
             <div className="info-container">
                 <LabelWithTags label={app.appName} tags={app.tags} />
                 <p className="content description">{app.description}</p>
-                <h2 className="technologies-title">Technologies</h2>
+                <h5 className="technologies-title">Technologies</h5>
                 <p className="content technologies-content">
                     {app.technologies.join(", ")}
                 </p>
             </div>
 
             <div className="more-info-container">
-                <div
-                    onClick={(e) => {
-                        e.stopPropagation()
-                        window.open(app.githubUrl)
-                    }}
+                <a
+                    rel="noreferrer"
+                    href={app.githubUrl}
+                    target="_blank"
                     className="more-info-button"
                 >
                     <div className="more-info-text">Plus d'infos</div>
                     <GithubLogo />
-                </div>
+                </a>
             </div>
 
             <ImageViewer
@@ -47,7 +46,7 @@ function AppProject({ app, onClick }) {
     )
 }
 
-const Container = styled.div`
+const Container = styled.section`
     position: relative;
     overflow: hidden;
     display: flex;
@@ -115,6 +114,7 @@ const Container = styled.div`
     }
 
     .more-info-container {
+        text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -122,6 +122,7 @@ const Container = styled.div`
     }
 
     .more-info-button {
+        text-decoration: none;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -136,7 +137,6 @@ const Container = styled.div`
         padding: 0.5em 0em 0.5em 0em;
         box-shadow: 0px 0px 3px black;
         transition: all 0.5s ease;
-        cursor: pointer;
 
         &:hover {
             transform: scale(1.05);
