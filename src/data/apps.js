@@ -61,6 +61,7 @@ const apps = [
         image: WebsiteImage,
         appName: "Mon site internet",
         tags: [tags.web, tags.react, tags.personalProject],
+        githubUrl: "https://github.com/david-dkp/portfolio",
         description:
             "Un site internet simple et minimaliste pour me présenter et présenter les projets sur lesquels j'ai travaillé.",
         technologies: [
