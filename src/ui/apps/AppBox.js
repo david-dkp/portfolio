@@ -25,12 +25,12 @@ const Container = styled(Link)`
     flex-direction: column;
     border-radius: 15px;
     transition: all 0.5s ease;
+    background-color: white;
 
     .image-container {
-        width: 100%;
-        flex: 1;
-        max-height: 120px;
+        min-height: 0px;
         background-color: #161b26;
+        max-height: 45%;
     }
 
     @media (min-width: 768px) {
@@ -56,8 +56,6 @@ const Container = styled(Link)`
 `
 
 const InfoContainer = styled.div`
-    background-color: white;
-    flex: 1;
     flex-direction: column;
     display: flex;
     padding: 15px;

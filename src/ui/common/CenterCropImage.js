@@ -2,19 +2,25 @@ import React from "react"
 import styled from "styled-components"
 
 function CenterCropImage({ image, alt }) {
-    return <Container image={image} />
+    return (
+        <Container>
+            <img src={image} alt={alt} />
+        </Container>
+    )
 }
 
 const Container = styled.div`
     height: 100%;
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url(${({ image }) => image});
-    background-size: cover;
+    img {
+        width: 100%;
+    }
 `
 
 export default CenterCropImage
