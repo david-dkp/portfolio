@@ -13,11 +13,19 @@ const skills = [
                 level: 1,
             },
             {
+                name: "Espresso",
+                level: 1,
+            },
+            {
                 name: "Kotlin",
                 level: 1,
             },
             {
                 name: "MVVM",
+                level: 1,
+            },
+            {
+                name: "Glide",
                 level: 1,
             },
             {
@@ -63,6 +71,14 @@ const skills = [
             {
                 name: "Robolectric",
                 level: 0.6,
+            },
+            {
+                name: "View binding",
+                level: 1,
+            },
+            {
+                name: "Work manager",
+                level: 1,
             },
             {
                 name: "Data binding",
