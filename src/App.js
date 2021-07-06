@@ -11,7 +11,9 @@ import ScrollToTop from "./ui/common/ScrollToTop"
 
 function App() {
     useEffect(() => {
-        Aos.init()
+        Aos.init({
+            startEvent: "load",
+        })
     }, [])
     return (
         <FormspreeProvider project="1701476863047630380">
