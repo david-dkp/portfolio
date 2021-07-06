@@ -20,7 +20,7 @@ const Container = styled.div`
     .title {
         text-align: center;
         font-weight: lighter;
-        font-size: 4rem;
+        font-size: 5rem;
         margin: 0em 1em;
     }
 

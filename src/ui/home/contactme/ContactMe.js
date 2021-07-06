@@ -9,9 +9,10 @@ function ContactMe() {
             <p>Vous avez une application à développer ?</p>
             <ContactMeButton
                 data-aos="fade-in"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
                 data-aos-easing="ease"
                 data-aos-delay="250"
+                data-aos-once="true"
                 to="/contact"
             >
                 Contactez-moi
