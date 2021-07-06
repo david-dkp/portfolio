@@ -7,6 +7,7 @@ import Skills from "./skills/Skills"
 import ContactMe from "./contactme/ContactMe"
 import Footer from "./footer/Footer"
 import DownloadCv from "./cv/DownloadCv"
+import SoftSkills from "./personalities/SoftSkills"
 
 function Home() {
     useEffect(() => {
@@ -18,6 +19,7 @@ function Home() {
         <Styles>
             <Landing />
             <Presentation />
+            <SoftSkills />
             <Skills />
             <RecentProjects />
             <DownloadCv />

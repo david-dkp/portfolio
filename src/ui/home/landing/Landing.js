@@ -13,7 +13,6 @@ function Landing() {
                 className="profile-image"
                 src={ProfileImage}
                 alt="Moi avec les bras croisés"
-                loading="eager"
             />
             <div className="container-text">
                 <div className="name-container">
@@ -60,9 +59,9 @@ const Container = styled.section`
     max-width: 1100px;
     min-height: 100vh;
     align-items: center;
+    overflow-x: hidden;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-x: hidden;
 
     .container-text {
         flex: 1 0 0px;
