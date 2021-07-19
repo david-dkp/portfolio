@@ -6,7 +6,7 @@ function ContactMe() {
     return (
         <Container>
             <div className="line" />
-            <p>Vous avez une application à développer ?</p>
+            <p>Vous êtes interessé par mon profil ?</p>
             <ContactMeButton
                 data-aos="fade-in"
                 data-aos-duration="1000"
