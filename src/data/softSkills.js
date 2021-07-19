@@ -8,25 +8,24 @@ import {
 const softSkills = [
     {
         title: "Autonome",
-        description: "J’aime chercher les informations la ou c’est censé être.",
+        description:
+            "Apprendre de nouvelles technologies est ma seconde nature.",
         logo: AutonomousLogo,
     },
     {
         title: "Curieux",
-        description:
-            "Découvrir les nouvelles technologies est ma seconde nature",
+        description: "J'aime découvrir la partie immergée de l'iceberg.",
         logo: CuriousLogo,
     },
     {
         title: "Ambitieux",
-        description:
-            "J’ai un regard ambitieux sur tout les projets que j’entreprends.",
+        description: "Mes futurs projets sont des projets réussis.",
         logo: AmbitiousLogo,
     },
     {
         title: "À l'écoute",
         description:
-            "J’écoute votre projet, vos objectifs, mes collègues, mon équipe en sah.",
+            "Une communication efficiente avec autrui est une priorité.",
         logo: ListeningLogo,
     },
 ]
