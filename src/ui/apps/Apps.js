@@ -24,7 +24,7 @@ function Apps() {
     useEffect(() => () => document.body.classList.remove("noscroll"), [])
 
     return (
-        <div>
+        <main>
             <AppsContainer>
                 {apps.map((app, index) => {
                     return <AppBox app={app} key={index} />
@@ -39,7 +39,7 @@ function Apps() {
                     />
                 </AppContainer>
             )}
-        </div>
+        </main>
     )
 }
 

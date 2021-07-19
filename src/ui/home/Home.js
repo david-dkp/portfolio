@@ -29,7 +29,7 @@ function Home() {
     )
 }
 
-const Styles = styled.div`
+const Styles = styled.main`
     display: flex;
     flex-direction: column;
 `
