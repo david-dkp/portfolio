@@ -55,7 +55,8 @@ function Landing() {
 const Container = styled.section`
     display: flex;
     align-self: center;
-    width: 85%;
+    width: 100%;
+    padding: 0px 20px;
     max-width: 1100px;
     min-height: 100vh;
     align-items: center;
@@ -132,6 +133,12 @@ const Container = styled.section`
     @media (max-width: 553px) {
         .text-developer span {
             margin-left: 3em;
+        }
+    }
+
+    @media (max-width: 403px) {
+        .container-text {
+            font-size: 11px;
         }
     }
 `
