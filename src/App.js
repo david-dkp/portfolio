@@ -22,10 +22,10 @@ function App() {
                     <ScrollToTop />
                     <Navigation />
                     <Switch>
-                        <Route exact path="/" component={Home} />
                         <Route exact path="/apps/:id" component={Apps} />
                         <Route path="/apps" component={Apps} />
-                        <Route exact path="/contact" component={Contact} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/" component={Home} />
                     </Switch>
                 </Router>
             </div>
