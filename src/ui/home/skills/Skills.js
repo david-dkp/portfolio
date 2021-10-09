@@ -1,42 +1,79 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
 import skills from "../../../data/skills"
-import SkillTab from "./SkillTab"
-import Technology from "./Technology"
+import * as d3 from "d3"
 
 function Skills() {
-    const [selectedSkill, setSelectedSkill] = useState(skills[0])
+    const [currentSkills, SetSkills] = useState(
+        skills.flatMap((e, i) => e.technologies)
+    )
+
+    const containerRef = useRef()
+
+    function getSize(d) {
+        var bbox = this.getBBox(),
+            cbbox = this.parentNode.getBBox(),
+            scale = Math.min(
+                cbbox.width / bbox.width,
+                cbbox.height / bbox.height
+            )
+        d.scale = scale
+    }
+
+    useEffect(() => {
+        const containerElement = containerRef.current
+        const width = containerElement.offsetWidth
+        const height = containerElement.offsetHeight
+
+        const data = currentSkills
+
+        const canvas = d3
+            .select(containerElement)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+
+        const pack = d3.pack().size([width, height]).padding(5)
+
+        const hierarchy = d3
+            .hierarchy({ children: data.sort((a, b) => b.level - a.level) })
+            .sum((d) => d.level)
+
+        const root = pack(hierarchy)
+
+        const bubbles = canvas
+            .selectAll(".technology")
+            .data(root.leaves())
+            .enter()
+            .append("g")
+            .attr("class", "technology")
+            .attr("transform", (d) => `translate(${d.x}, ${d.y})`)
+
+        bubbles
+            .append("circle")
+            .attr("r", (d) => d.r)
+            .attr("fill-opacity", 1)
+            .attr("fill", "#161b26")
+
+        bubbles
+            .append("text")
+            .text((d) => d.data.name)
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            .attr("fill", "white")
+            .style("font-size", "1px")
+            .style("font-size", getSize)
+            .style("font-size", (d) => d.scale + "px")
+
+        containerElement.scrollLeft = width / 5
+        containerElement.scrollTop = height / 5
+    })
 
     return (
         <Container>
             <Header title="Mes compétences" />
-            <div className="skills-container">
-                <div className="skills-tab">
-                    {skills.map((skill, index) => {
-                        return (
-                            <SkillTab
-                                onClick={(e) => setSelectedSkill(skill)}
-                                skill={skill}
-                                key={index}
-                                selected={selectedSkill === skill}
-                            />
-                        )
-                    })}
-                </div>
-                <div className="skills-content">
-                    <div className="skills-technologies">
-                        {selectedSkill.technologies
-                            .sort((a, b) => b.level - a.level)
-                            .map((technology, index) => (
-                                <Technology
-                                    key={index}
-                                    technology={technology}
-                                />
-                            ))}
-                    </div>
-                </div>
-            </div>
+            <div ref={containerRef} className="bubbles-container" />
         </Container>
     )
 }
@@ -45,57 +82,13 @@ const Container = styled.section`
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    .skills-container {
-        overflow: hidden;
-        align-self: center;
-        width: 90vw;
-        max-width: 1000px;
-        margin: 70px 0px;
-        display: flex;
-        background-color: white;
-        border-radius: 23px;
-    }
-
-    .skills-tab {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 0px;
-        div {
-            flex: 1 1 0px;
-        }
-    }
-
-    .skills-content {
+    .bubbles-container {
+        width: 80vw;
+        height: 80vh;
+        max-width: 1200px;
         overflow: scroll;
-        height: 500px;
-        flex: 3 1 0px;
-    }
-
-    .skills-technologies {
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px;
-        gap: 20px;
-    }
-
-    @media (max-width: 768px) {
-        .skills-container {
-            flex-direction: column;
-        }
-
-        .skills-content {
-            flex: none;
-        }
-
-        .skills-tab {
-            flex-direction: row;
-            height: auto;
-            div {
-                padding: 1em 0px;
-            }
-        }
     }
 `
 
