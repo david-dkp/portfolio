@@ -4,6 +4,7 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import "aos/dist/aos.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 ReactDOM.render(
     <React.StrictMode>
