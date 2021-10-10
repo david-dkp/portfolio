@@ -1,16 +1,5 @@
 const testimonies = [
     {
-        photoUrl: "",
-        testimony:
-            "Besoin d'un ajout de fonctionnalité pour l'une de mes applications android, David a réalisé le travail efficacement et rapidement ! Je recommande...",
-        source: {
-            name: "Malt",
-            linkUrl: "https://www.malt.fr/profile/daviddekeuwer",
-        },
-        name: "WGI Gaming",
-        type: "Client",
-    },
-    {
         photoUrl:
             "https://media-exp1.licdn.com/dms/image/C4D03AQG-7Kbulwkj5A/profile-displayphoto-shrink_400_400/0/1542372202248?e=1639008000&v=beta&t=Cohtbf4FIBc5CshZsakyMlU6voa9cAvP0aKlaEfwIkE",
         testimony: `Il a été particulièrement agréable d'accompagner David pour son parcours de formation de Développeur d'applications Android chez OpenClassrooms.
@@ -24,6 +13,17 @@ const testimonies = [
         },
         name: "Denis",
         type: "Mentor",
+    },
+    {
+        photoUrl: "",
+        testimony:
+            "Besoin d'un ajout de fonctionnalité pour l'une de mes applications android, David a réalisé le travail efficacement et rapidement ! Je recommande...",
+        source: {
+            name: "Malt",
+            linkUrl: "https://www.malt.fr/profile/daviddekeuwer",
+        },
+        name: "WGI Gaming",
+        type: "Client",
     },
     {
         photoUrl:
