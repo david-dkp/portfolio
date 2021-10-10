@@ -33,8 +33,8 @@ const Container = styled.section`
     flex-direction: column;
 
     .testimony-container {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
