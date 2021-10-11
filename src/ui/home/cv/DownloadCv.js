@@ -71,7 +71,8 @@ const Container = styled.section`
     .cv {
         max-width: 500px;
         width: 80vw;
-        margin: 40px;
+        margin-top: 40px;
+        margin-bottom: 10px;
         transition: all 0.5s ease;
 
         &:hover {
