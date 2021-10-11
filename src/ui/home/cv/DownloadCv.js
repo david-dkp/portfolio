@@ -1,41 +1,83 @@
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
+import { throttle } from "lodash"
 import cvpdf from "../../../assets/cv_david_dekeuwer.pdf"
+import Header from "../common/Header"
+import { Document, Page } from "react-pdf"
 
 function DownloadCv() {
+    const [pdfWidth, setPdfWidth] = useState(0)
+    const pdfWrapperRef = useRef()
+
+    const resizeThrottleDelay = 1500
+
+    const setPdfSize = () => {
+        if (pdfWrapperRef.current) {
+            setPdfWidth(pdfWrapperRef.current.getBoundingClientRect().width)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener(
+            "resize",
+            throttle(setPdfSize, resizeThrottleDelay)
+        )
+        setPdfSize()
+
+        return () => {
+            window.removeEventListener(
+                "resize",
+                throttle(setPdfSize, resizeThrottleDelay)
+            )
+        }
+    }, [])
+
     return (
         <Container>
-            <DownloadButton href={cvpdf} target="_blank">
-                Consulter mon CV
-            </DownloadButton>
+            <Header title="Mon CV" />
+            <a
+                ref={pdfWrapperRef}
+                className="cv"
+                href={cvpdf}
+                target="_blank"
+                rel="noreferrer"
+            >
+                <Document className="doc" file={cvpdf}>
+                    <Page
+                        className="pdf-page"
+                        renderMode="svg"
+                        width={pdfWidth}
+                        pageNumber={1}
+                    />
+                </Document>
+            </a>
         </Container>
     )
 }
 
 const Container = styled.section`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-size: 30px;
-    padding: 2em 1em;
-`
+    margin-top: 1em;
 
-const DownloadButton = styled.a`
-    padding: 0.5em 1em;
-    font-size: 1.2em;
-    border-radius: 15px;
-    border: 1px solid white;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    color: white;
-
-    &:hover {
-        color: black;
-        background-color: white;
+    .doc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    &:active {
-        background-color: grey;
+    .cv {
+        max-width: 500px;
+        width: 80vw;
+        margin: 40px;
+        transition: all 0.5s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.5s ease;
+        }
     }
 `
 
