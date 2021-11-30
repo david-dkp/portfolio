@@ -6,14 +6,14 @@
     "runtime-main.js": "/static/js/runtime-main.98b2f708.js",
     "runtime-main.js.map": "/static/js/runtime-main.98b2f708.js.map",
     "static/css/2.641f8aa3.chunk.css": "/static/css/2.641f8aa3.chunk.css",
-    "static/js/2.00539ecc.chunk.js": "/static/js/2.00539ecc.chunk.js",
-    "static/js/2.00539ecc.chunk.js.map": "/static/js/2.00539ecc.chunk.js.map",
-    "static/js/3.2bef9694.chunk.js": "/static/js/3.2bef9694.chunk.js",
-    "static/js/3.2bef9694.chunk.js.map": "/static/js/3.2bef9694.chunk.js.map",
+    "static/js/2.13c4c023.chunk.js": "/static/js/2.13c4c023.chunk.js",
+    "static/js/2.13c4c023.chunk.js.map": "/static/js/2.13c4c023.chunk.js.map",
+    "static/js/3.07566c05.chunk.js": "/static/js/3.07566c05.chunk.js",
+    "static/js/3.07566c05.chunk.js.map": "/static/js/3.07566c05.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.641f8aa3.chunk.css.map": "/static/css/2.641f8aa3.chunk.css.map",
     "static/css/main.1e120983.chunk.css.map": "/static/css/main.1e120983.chunk.css.map",
-    "static/js/2.00539ecc.chunk.js.LICENSE.txt": "/static/js/2.00539ecc.chunk.js.LICENSE.txt",
+    "static/js/2.13c4c023.chunk.js.LICENSE.txt": "/static/js/2.13c4c023.chunk.js.LICENSE.txt",
     "static/media/cv_david_dekeuwer.af568335.pdf": "/static/media/cv_david_dekeuwer.af568335.pdf",
     "static/media/go4lunch-image.4e551cc1.png": "/static/media/go4lunch-image.4e551cc1.png",
     "static/media/realestatemanager-image.5302c8fe.png": "/static/media/realestatemanager-image.5302c8fe.png",
@@ -21,9 +21,9 @@
     "static/media/website-image.06be502c.png": "/static/media/website-image.06be502c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.98b2f708.js",
+    "static/js/runtime-main.cc3d2500.js",
     "static/css/2.641f8aa3.chunk.css",
-    "static/js/2.00539ecc.chunk.js",
+    "static/js/2.13c4c023.chunk.js",
     "static/css/main.1e120983.chunk.css",
     "static/js/main.f11df9c0.chunk.js"
   ]
