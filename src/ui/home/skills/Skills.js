@@ -2,8 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
 import skills from "../../../data/skills"
-import SkillTab from "./SkillTab"
-import Technology from "./Technology"
+import Skill from "./Skill"
 
 function Skills() {
     const [selectedSkill, setSelectedSkill] = useState(skills[0])
@@ -12,30 +11,14 @@ function Skills() {
         <Container>
             <Header title="Mes compétences" />
             <div className="skills-container">
-                <div className="skills-tab">
-                    {skills.map((skill, index) => {
-                        return (
-                            <SkillTab
-                                onClick={(e) => setSelectedSkill(skill)}
-                                skill={skill}
-                                key={index}
-                                selected={selectedSkill === skill}
-                            />
-                        )
-                    })}
-                </div>
-                <div className="skills-content">
-                    <div className="skills-technologies">
-                        {selectedSkill.technologies
-                            .sort((a, b) => b.level - a.level)
-                            .map((technology, index) => (
-                                <Technology
-                                    key={index}
-                                    technology={technology}
-                                />
-                            ))}
-                    </div>
-                </div>
+                {skills.map((e, i) => (
+                    <>
+                        <Skill key={i} skill={e} />{" "}
+                        {i < skills.length - 1 && (
+                            <div className="skill-divider" />
+                        )}
+                    </>
+                ))}
             </div>
         </Container>
     )
@@ -47,55 +30,20 @@ const Container = styled.section`
     flex-direction: column;
 
     .skills-container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
         overflow: hidden;
         align-self: center;
+        border-radius: 30px;
         width: 90vw;
-        max-width: 1000px;
-        margin: 70px 0px;
-        display: flex;
+        max-width: 800px;
         background-color: white;
-        border-radius: 23px;
     }
 
-    .skills-tab {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 0px;
-        div {
-            flex: 1 1 0px;
-        }
-    }
-
-    .skills-content {
-        overflow: scroll;
-        height: 500px;
-        flex: 3 1 0px;
-    }
-
-    .skills-technologies {
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px;
-        gap: 20px;
-    }
-
-    @media (max-width: 768px) {
-        .skills-container {
-            flex-direction: column;
-        }
-
-        .skills-content {
-            flex: none;
-        }
-
-        .skills-tab {
-            flex-direction: row;
-            height: auto;
-            div {
-                padding: 1em 0px;
-            }
-        }
+    .skill-divider {
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 1px;
     }
 `
 
