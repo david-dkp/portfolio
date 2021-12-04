@@ -10,9 +10,9 @@ function ContactOptions() {
             <div className="options-container">
                 <ContactOption
                     title="Par téléphone"
-                    text="0781923016"
+                    text="+33781923016"
                     logo={PhoneLogo}
-                    href="tel:0781923016"
+                    href="tel:+33781923016"
                     target="_blank"
                 />
 
