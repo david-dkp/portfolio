@@ -1,30 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.1e120983.chunk.css",
-    "main.js": "/static/js/main.018824a0.chunk.js",
-    "main.js.map": "/static/js/main.018824a0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.cc3d2500.js",
-    "runtime-main.js.map": "/static/js/runtime-main.cc3d2500.js.map",
+    "main.js": "/static/js/main.66c93530.chunk.js",
+    "main.js.map": "/static/js/main.66c93530.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d223e93.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d223e93.js.map",
     "static/css/2.641f8aa3.chunk.css": "/static/css/2.641f8aa3.chunk.css",
-    "static/js/2.13c4c023.chunk.js": "/static/js/2.13c4c023.chunk.js",
-    "static/js/2.13c4c023.chunk.js.map": "/static/js/2.13c4c023.chunk.js.map",
-    "static/js/3.07566c05.chunk.js": "/static/js/3.07566c05.chunk.js",
-    "static/js/3.07566c05.chunk.js.map": "/static/js/3.07566c05.chunk.js.map",
+    "static/js/2.dfa68cda.chunk.js": "/static/js/2.dfa68cda.chunk.js",
+    "static/js/2.dfa68cda.chunk.js.map": "/static/js/2.dfa68cda.chunk.js.map",
+    "static/js/3.0b63749a.chunk.js": "/static/js/3.0b63749a.chunk.js",
+    "static/js/3.0b63749a.chunk.js.map": "/static/js/3.0b63749a.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.641f8aa3.chunk.css.map": "/static/css/2.641f8aa3.chunk.css.map",
     "static/css/main.1e120983.chunk.css.map": "/static/css/main.1e120983.chunk.css.map",
-    "static/js/2.13c4c023.chunk.js.LICENSE.txt": "/static/js/2.13c4c023.chunk.js.LICENSE.txt",
+    "static/js/2.dfa68cda.chunk.js.LICENSE.txt": "/static/js/2.dfa68cda.chunk.js.LICENSE.txt",
     "static/media/cv_david_dekeuwer.32c15c11.pdf": "/static/media/cv_david_dekeuwer.32c15c11.pdf",
     "static/media/go4lunch-image.4e551cc1.png": "/static/media/go4lunch-image.4e551cc1.png",
     "static/media/realestatemanager-image.5302c8fe.png": "/static/media/realestatemanager-image.5302c8fe.png",
     "static/media/self-picture.0a722483.png": "/static/media/self-picture.0a722483.png",
+    "static/media/weatherapp-image.db67b2b3.png": "/static/media/weatherapp-image.db67b2b3.png",
     "static/media/website-image.06be502c.png": "/static/media/website-image.06be502c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.cc3d2500.js",
+    "static/js/runtime-main.7d223e93.js",
     "static/css/2.641f8aa3.chunk.css",
-    "static/js/2.13c4c023.chunk.js",
+    "static/js/2.dfa68cda.chunk.js",
     "static/css/main.1e120983.chunk.css",
-    "static/js/main.018824a0.chunk.js"
+    "static/js/main.66c93530.chunk.js"
   ]
 }
