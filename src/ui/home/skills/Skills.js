@@ -45,6 +45,19 @@ const Container = styled.section`
         background-color: rgba(0, 0, 0, 0.1);
         width: 1px;
     }
+
+    @media (max-width: 590px) {
+        .skills-container {
+            flex-direction: column;
+            padding-top: 30px;
+        }
+
+        .skill-divider {
+            width: 100%;
+            height: 1px;
+            margin-bottom: 30px;
+        }
+    }
 `
 
 export default Skills

@@ -32,7 +32,7 @@ const Container = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 70px;
 
     .subcontainer {
         justify-content: space-around;

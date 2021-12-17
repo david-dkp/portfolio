@@ -28,7 +28,14 @@ const skills = [
             color: "#000",
         },
         languages: ["JavaScript", "HTML", "CSS"],
-        libraries: ["React", "AOS", "Styled Components", "Flexbox"],
+        libraries: [
+            "React",
+            "Redux",
+            "SASS",
+            "AOS",
+            "Styled Components",
+            "Flexbox",
+        ],
         tools: ["Visual Studio Code", "Git", "Figma"],
     },
 ]
