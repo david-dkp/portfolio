@@ -18,7 +18,7 @@ const tags = {
     },
     react: {
         label: "React",
-        color: "#61DBFB",
+        color: "#2CCEF9",
     },
     unity: {
         label: "Unity",

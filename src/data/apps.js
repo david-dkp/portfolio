@@ -2,8 +2,20 @@ import tags from "./tags"
 import Go4LunchImage from "../assets/projectImages/go4lunch-image.png"
 import RealEstateManagerImage from "../assets/projectImages/realestatemanager-image.png"
 import WebsiteImage from "../assets/projectImages/website-image.png"
+import WeatherAppImage from "../assets/projectImages/weatherapp-image.png"
 
 const apps = [
+    {
+        id: "weatherapp",
+        image: WeatherAppImage,
+        appName: "Weather App",
+        tags: [tags.react, tags.personalProject],
+        githubUrl: "https://github.com/david-dkp/WeatherApp",
+        websiteUrl: "https://unruffled-fermi-18e89f.netlify.app",
+        description:
+            "Un site internet qui indique la météo d'aujourd'hui, celles des suivantes, et les points forts de la journée. Géolocalisation et possibilité de rechercher une ville.",
+        technologies: ["React", "Redux", "Sass", "JSX", "MetaWeather API"],
+    },
     {
         id: "go4lunch",
         image: Go4LunchImage,

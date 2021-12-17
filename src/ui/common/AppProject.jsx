@@ -4,6 +4,7 @@ import LabelWithTags from "./LabelWithTags"
 import CenterCropImage from "./CenterCropImage"
 import GithubLogo from "./svgs/GithubLogo"
 import ImageViewer from "./ImageViewer"
+import { OpenInBrowser } from "@material-ui/icons"
 
 function AppProject({ app, onClick }) {
     const [showImage, setShowImage] = useState(false)
@@ -35,6 +36,16 @@ function AppProject({ app, onClick }) {
                     <div className="more-info-text">Plus d'infos</div>
                     <GithubLogo />
                 </a>
+                {app.websiteUrl && (
+                    <a
+                        rel="noreferrer"
+                        href={app.websiteUrl}
+                        target="_blank"
+                        className="website-button"
+                    >
+                        <OpenInBrowser />
+                    </a>
+                )}
             </div>
 
             <ImageViewer
@@ -118,6 +129,7 @@ const Container = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 15px;
         flex-grow: 1;
     }
 
@@ -157,6 +169,27 @@ const Container = styled.section`
             margin-right: 1em;
             width: 1.5em;
             height: 1.5em;
+        }
+    }
+
+    .website-button {
+        padding: 0.75em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: white;
+        border-radius: 999px;
+        box-shadow: 0px 0px 5px black;
+        transition: all 0.5s ease;
+        color: #1f273d;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(1.025);
         }
     }
 `
