@@ -9,7 +9,7 @@ const apps = [
         id: "weatherapp",
         image: WeatherAppImage,
         appName: "Weather App",
-        tags: [tags.react, tags.personalProject],
+        tags: [tags.web, tags.react, tags.personalProject],
         githubUrl: "https://github.com/david-dkp/WeatherApp",
         websiteUrl: "https://unruffled-fermi-18e89f.netlify.app",
         description:
