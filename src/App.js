@@ -3,7 +3,6 @@ import { useEffect } from "react"
 import Navigation from "./ui/navigation/Navigation"
 import Home from "./ui/home/Home"
 import Apps from "./ui/apps/Apps"
-import Contact from "./ui/contact/Contact"
 import Aos from "aos"
 import { FormspreeProvider } from "@formspree/react"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
@@ -22,7 +21,6 @@ function App() {
                     <Switch>
                         <Route exact path="/apps/:id" component={Apps} />
                         <Route path="/apps" component={Apps} />
-                        <Route path="/contact" component={Contact} />
                         <Route path="/" component={Home} />
                     </Switch>
                 </Router>

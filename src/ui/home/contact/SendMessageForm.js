@@ -100,7 +100,6 @@ const growingBall = keyframes`
     100% {
         tranform: scale(1);
     }
-}
 `
 
 const Container = styled.section`

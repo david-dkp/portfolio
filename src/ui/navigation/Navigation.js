@@ -73,17 +73,6 @@ function Navigation() {
                                 Applications
                             </MyNavLink>
                         </li>
-
-                        <li>
-                            <MyNavLink
-                                onClick={onLinkClickListener}
-                                activeClassName="active-link"
-                                exact
-                                to="/contact"
-                            >
-                                Contact
-                            </MyNavLink>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -186,7 +175,6 @@ const Styles = styled.div`
     }
 
     nav {
-        width: 50%;
         height: 100%;
     }
 
@@ -199,6 +187,8 @@ const Styles = styled.div`
         align-items: center;
         justify-content: space-evenly;
         height: 100%;
+        gap: 5rem;
+        right: 15vw;
         list-style-type: none;
     }
 
@@ -237,6 +227,7 @@ const Styles = styled.div`
             height: fit-content;
             gap: 7vh;
             margin-left: 0;
+            right: auto;
         }
 
         .socials-container {

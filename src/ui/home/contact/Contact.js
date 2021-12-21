@@ -5,12 +5,10 @@ import OrSeparator from "./OrSeparator"
 import ContactOptions from "./ContactOptions"
 
 function Contact() {
-    useEffect(() => {
-        document.title = "Comment me contacter ?"
-    }, [])
 
     return (
         <Container>
+            <div className="contact-line" />
             <div className="sub-container">
                 <SendMessageForm />
                 <OrSeparator />
@@ -20,14 +18,20 @@ function Contact() {
     )
 }
 
-const Container = styled.main`
+const Container = styled.div`
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     align-items: center;
-
+    flex-direction: column;  
+  
+    .contact-line {
+      height: 1px;
+      width: 100vw;
+      background-color: black;
+    }
+  
     .sub-container {
-        margin-top: 100px;
+        margin-block: 100px;
         align-items: stretch;
         display: flex;
         width: 90vw;

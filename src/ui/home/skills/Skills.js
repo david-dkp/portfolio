@@ -15,7 +15,7 @@ function Skills() {
                     <>
                         <Skill key={i} skill={e} />{" "}
                         {i < skills.length - 1 && (
-                            <div className="skill-divider" />
+                            <div key={i+"separator"} className="skill-divider" />
                         )}
                     </>
                 ))}
