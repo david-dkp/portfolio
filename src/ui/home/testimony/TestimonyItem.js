@@ -30,7 +30,7 @@ const Container = styled.div`
     background-color: #20293f;
     display: flex;
     flex-direction: column;
-    padding: 20px 40px 40px 40px;
+    padding: 30px 40px 40px 40px;
     color: white;
     font-size: 1em;
     text-align: start;
@@ -82,7 +82,7 @@ const PersonContainer = styled.div`
 
 const TestimonyText = styled.p`
     overflow: scroll;
-    margin-top: 10px;
+    padding-top: 15px;
     font-size: 1.5em;
     font-weight: lighter;
     flex-grow: 1;

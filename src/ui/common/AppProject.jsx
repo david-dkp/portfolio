@@ -63,9 +63,7 @@ const Container = styled.section`
     display: flex;
     border-radius: 23px;
     flex-direction: column;
-    background-color: white;
-    max-width: 450px;
-    width: 90vw;
+    width: clamp(400px, 90vw, 450px);
     height: 600px;
     text-align: start;
 
@@ -101,7 +99,8 @@ const Container = styled.section`
     }
 
     .info-container {
-        height: 300px;
+      background-color: white;
+      height: 300px;
         overflow: scroll;
         padding: 30px;
         padding-bottom: 0px;
@@ -125,7 +124,8 @@ const Container = styled.section`
     }
 
     .more-info-container {
-        text-decoration: none;
+      background-color: white;
+      text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;

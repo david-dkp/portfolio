@@ -1,7 +1,6 @@
 const testimonies = [
     {
-        photoUrl:
-            "https://media-exp1.licdn.com/dms/image/C4D03AQG-7Kbulwkj5A/profile-displayphoto-shrink_400_400/0/1542372202248?e=1639008000&v=beta&t=Cohtbf4FIBc5CshZsakyMlU6voa9cAvP0aKlaEfwIkE",
+        photoUrl: "",
         testimony: `Il a été particulièrement agréable d'accompagner David pour son parcours de formation de Développeur d'applications Android chez OpenClassrooms.
         Son travail fût toujours réalisé avec soin, que ce soit pour les projets de développement ou pour les projets de conception et documentation.
         David fait preuve d’une extrême autonomie, d'une forte capacité d'analyse pour effectuer ses choix de conception et de toutes les qualités et la curiosité nécessaires pour être en veille active sur le développement d'applications, ce qui lui a permis de sélectionner avec soin et de mettre en œuvre des architectures modernes ainsi que d'utiliser des librairies avancées pour la réalisation de ses projets.
@@ -26,8 +25,7 @@ const testimonies = [
         type: "Client",
     },
     {
-        photoUrl:
-            "https://media-exp1.licdn.com/dms/image/C4D03AQF0gLKOoDSAkw/profile-displayphoto-shrink_400_400/0/1551386195036?e=1639008000&v=beta&t=YpaMZvqj5wbnyQCOYJ4Tv4fjBBuc5M4X1GTEF70BuIw",
+        photoUrl: "",
         testimony: `J'ai évalué David dans le cadre de sa formation pour devenir développeur d'applications sur Android. Je le recommande pour la qualité de son travail et son professionnalisme.`,
         source: {
             name: "LinkedIn",

@@ -7,22 +7,11 @@ import { Link } from "react-router-dom"
 
 function RecentProjects() {
     return (
-        <Container>
+        <Container id="projects-section">
             <Header title="Mes projets récents" />
-            <div className="subcontainer">
                 <div className="projects-container">
-                    <AppProject app={apps[0]} />
-                    <AppProject app={apps[1]} />
+                    {apps.map((app, i) => <AppProject key={i} app={app} />)}
                 </div>
-                <Link className="see-more-container" to="/apps">
-                    <div className="see-more-background" />
-                    <div className="logo">
-                        <div className="first" />
-                        <div className="second" />
-                    </div>
-                    <div className="text">Voir plus</div>
-                </Link>
-            </div>
         </Container>
     )
 }
@@ -33,22 +22,16 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     margin-top: 70px;
-
-    .subcontainer {
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 70px;
-        gap: 70px;
-    }
-
+  
     .projects-container {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        gap: 70px;
-        flex-wrap: wrap;
+      margin-top: 50px;
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-inline: 15px;
+      justify-content: center;
     }
 
     .see-more-container {

@@ -9,8 +9,30 @@ import DownloadCv from "./cv/DownloadCv"
 import SoftSkills from "./personalities/SoftSkills"
 import Testimony from "./testimony/Testimony"
 import Contact from "./contact/Contact";
+import {useHistory, useLocation} from "react-router-dom";
+import { scroller, animateScroll } from "react-scroll"
+import {Waypoint} from "react-waypoint";
 
 function Home() {
+    const location = useLocation()
+
+    const section = location.pathname.slice(location.pathname.lastIndexOf("/") + 1, location.pathname.length)
+
+    const scrollConfig = {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -100
+    }
+
+    if (section === "") {
+        animateScroll.scrollToTop()
+    } else if (section ==="apps"){
+        scroller.scrollTo("projects-section", scrollConfig)
+    } else if (section === "contact") {
+        scroller.scrollTo("contact-section", scrollConfig)
+    }
+
     useEffect(() => {
         document.title =
             "David Dekeuwer, développeur d'applications Android - Mon site Web - Mon portfolio"
