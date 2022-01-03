@@ -26,7 +26,7 @@ const Container = styled.section`
     .projects-container {
       margin-top: 50px;
       width: 100%;
-      max-width: 1400px;
+      max-width: 1500px;
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
