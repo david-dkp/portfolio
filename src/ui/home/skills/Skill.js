@@ -2,14 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import SkillSection from "./SkillSection"
 
-function Skill({ skill: { name, logo, languages, libraries, tools } }) {
+function Skill({skill: {name, logo, languages, libraries, tools}}) {
     return (
         <Container logoColor={logo.color}>
             <div className="logo-container">
                 {logo.svg()}
                 <h4>{name}</h4>
             </div>
-            <div className="divider" />
+            <div className="divider"/>
             <div className="skill-section-container">
                 <SkillSection
                     title="Langages"
@@ -19,7 +19,7 @@ function Skill({ skill: { name, logo, languages, libraries, tools } }) {
                     title="Librairies"
                     contentText={libraries.join(", ")}
                 />
-                <SkillSection title="Outils" contentText={tools.join(", ")} />
+                <SkillSection title="Outils" contentText={tools.join(", ")}/>
             </div>
         </Container>
     )
@@ -47,7 +47,7 @@ const Container = styled.div`
         gap: 20px;
 
         svg {
-            fill: ${({ logoColor }) => logoColor};
+            fill: ${({logoColor}) => logoColor};
             width: 5em;
             height: 5em;
         }

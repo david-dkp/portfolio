@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-function CenterCropImage({ image, alt }) {
+function CenterCropImage({image, alt}) {
     return (
         <Container>
-            <img src={image} alt={alt} />
+            <img src={image} alt={alt}/>
         </Container>
     )
 }

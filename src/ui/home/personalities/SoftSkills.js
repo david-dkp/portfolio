@@ -7,7 +7,7 @@ import SoftSkill from "./SoftSkill"
 function Personalities() {
     return (
         <Container>
-            <Header title="Je suis" />
+            <Header title="Je suis"/>
             <div className="soft-skills-container">
                 {softSkills.map((softSkill, index) => {
                     return (

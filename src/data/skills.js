@@ -1,4 +1,4 @@
-import { AndroidLogo, WebLogo } from "../ui/common/svgs"
+import {AndroidLogo, WebLogo} from "../ui/common/svgs"
 
 const skills = [
     {

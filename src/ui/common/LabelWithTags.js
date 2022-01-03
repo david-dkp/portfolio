@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import AppTag from "./AppTag"
 
-function LabelWithTags({ label, tags }) {
+function LabelWithTags({label, tags}) {
     return (
         <Container>
             <h4>{label}</h4>
             <div className="tags-container">
                 {tags.map((tag, index) => {
-                    return <AppTag tag={tag} key={index} />
+                    return <AppTag tag={tag} key={index}/>
                 })}
             </div>
         </Container>

@@ -6,10 +6,10 @@ import GithubLogo from "./svgs/GithubLogo"
 import ImageViewer from "./ImageViewer"
 import {OpenInBrowser} from "@material-ui/icons"
 
-const Technology = ({technology}) => {
+const Technology = ({technology, ...props}) => {
 
     return (
-        <div className={"technology-container"}>
+        <div className={"technology-container"} {...props}>
             {technology}
         </div>
     )
@@ -30,11 +30,11 @@ function AppProject({app, onClick}) {
                 <LabelWithTags label={app.appName} tags={app.tags}/>
                 <p className="content description">{app.description}</p>
                 <h5 className="technologies-title">Technologies</h5>
-                <p className="content technologies-content">
+                <div className="content technologies-content">
                     {app.technologies.map((e, i) => (
                         <Technology technology={e} key={i}/>
                     ))}
-                </p>
+                </div>
             </div>
 
             <div className="more-info-container">

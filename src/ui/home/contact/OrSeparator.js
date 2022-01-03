@@ -4,7 +4,7 @@ import styled from "styled-components"
 function OrSeparator() {
     return (
         <Container>
-            <div className="line" />
+            <div className="line"/>
             <p className="or">OU</p>
         </Container>
     )

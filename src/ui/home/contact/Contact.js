@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import SendMessageForm from "./SendMessageForm"
 import OrSeparator from "./OrSeparator"
@@ -8,11 +8,11 @@ function Contact() {
 
     return (
         <Container id="contact-section">
-            <div className="contact-line" />
+            <div className="contact-line"/>
             <div className="sub-container">
-                <SendMessageForm />
-                <OrSeparator />
-                <ContactOptions />
+                <SendMessageForm/>
+                <OrSeparator/>
+                <ContactOptions/>
             </div>
         </Container>
     )

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, {useEffect} from "react"
 import styled from "styled-components"
 import Landing from "./landing/Landing"
 import Presentation from "./presentation/Presentation"
@@ -9,12 +9,11 @@ import DownloadCv from "./cv/DownloadCv"
 import SoftSkills from "./personalities/SoftSkills"
 import Testimony from "./testimony/Testimony"
 import Contact from "./contact/Contact";
-import {useHistory, useLocation} from "react-router-dom";
-import { scroller, animateScroll } from "react-scroll"
+import { useLocation } from "react-router-dom";
+import {animateScroll, scroller} from "react-scroll"
 
 function Home() {
     const location = useLocation()
-    const history = useHistory()
     const section = location.pathname.slice(location.pathname.lastIndexOf("/") + 1, location.pathname.length)
 
     const scrollConfig = {
@@ -26,7 +25,7 @@ function Home() {
 
     if (section === "") {
         animateScroll.scrollToTop()
-    } else if (section ==="apps"){
+    } else if (section === "apps") {
         scroller.scrollTo("projects-section", scrollConfig)
     } else if (section === "contact") {
         scroller.scrollTo("contact-section", scrollConfig)
@@ -39,15 +38,15 @@ function Home() {
 
     return (
         <Styles>
-            <Landing />
-            <Presentation />
-            <SoftSkills />
-            <Skills />
-            <RecentProjects />
-            <Testimony />
-            <DownloadCv />
-            <Contact />
-            <Footer />
+            <Landing/>
+            <Presentation/>
+            <SoftSkills/>
+            <Skills/>
+            <RecentProjects/>
+            <Testimony/>
+            <DownloadCv/>
+            <Contact/>
+            <Footer/>
         </Styles>
     )
 }

@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-function TestimonyItem({ testimony }) {
+function TestimonyItem({testimony}) {
     return (
         <Container>
             <PersonContainer>
                 {testimony.photoUrl && (
                     <div className="person-image-container">
-                        <img src={testimony.photoUrl} alt="Profile" />
+                        <img src={testimony.photoUrl} alt="Profile"/>
                     </div>
                 )}
                 <h5>

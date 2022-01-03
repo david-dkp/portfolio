@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import styled, { keyframes } from "styled-components"
-import { useForm } from "@formspree/react"
+import React, {useState} from "react"
+import styled, {keyframes} from "styled-components"
+import {useForm} from "@formspree/react"
 
 function SendMessageForm() {
     const [state, handleSubmit] = useForm("contactForm")
@@ -78,9 +78,9 @@ function SendMessageForm() {
                 <SubmitButton isLoading={state.submitting} type="submit">
                     Envoyer
                     <div className="loading-overlay">
-                        <div />
-                        <div />
-                        <div />
+                        <div/>
+                        <div/>
+                        <div/>
                     </div>
                 </SubmitButton>
             </form>
@@ -121,13 +121,13 @@ const Container = styled.section`
         }
 
         .error-text.email {
-            margin-bottom: ${({ showEmailError }) =>
-                showEmailError ? "0.3em" : "-1.1em"};
+            margin-bottom: ${({showEmailError}) =>
+    showEmailError ? "0.3em" : "-1.1em"};
         }
 
         .error-text.message {
-            margin-bottom: ${({ showMessageError }) =>
-                showMessageError ? "0.3em" : "-1em"};
+            margin-bottom: ${({showMessageError}) =>
+    showMessageError ? "0.3em" : "-1em"};
         }
     }
 
@@ -210,7 +210,7 @@ const SubmitButton = styled.button`
     margin-bottom: 40px;
     transition: all 0.25s linear;
     cursor: pointer;
-    pointer-events: ${({ isLoading }) => (isLoading ? "none" : "inherit")};
+    pointer-events: ${({isLoading}) => (isLoading ? "none" : "inherit")};
     outline: none;
 
     .loading-overlay {
@@ -223,7 +223,7 @@ const SubmitButton = styled.button`
         justify-content: center;
         align-items: center;
         gap: 9px;
-        display: ${({ isLoading }) => (isLoading ? "flex" : "none")};
+        display: ${({isLoading}) => (isLoading ? "flex" : "none")};
         transition: all 0.5s ease;
 
         div {

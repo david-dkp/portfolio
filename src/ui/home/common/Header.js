@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function Header({ title }) {
+function Header({title}) {
     return (
         <Container>
             <h2 className="title">{title}</h2>

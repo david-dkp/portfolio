@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function ContactOption({ title, logo, text, ...other }) {
+function ContactOption({title, logo, text, ...other}) {
     return (
         <Container {...other}>
             <p className="title">{title}</p>
