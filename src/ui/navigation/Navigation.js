@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
+import {NavLink, useHistory} from "react-router-dom"
 import styled from "styled-components"
 import socials from "./../../data/socials"
 import SocialButton from "./SocialButton"
 import { useMediaQuery } from "react-responsive"
 
 function Navigation() {
+    const history = useHistory()
     const [drawerOpened, setDrawerOpened] = useState(false)
 
     const isMobile = useMediaQuery({
@@ -23,8 +24,9 @@ function Navigation() {
         }
     }, [isMobile])
 
-    const onLinkClickListener = () => {
+    const onLinkClickListener = (path) => {
         setDrawerOpened(false)
+        history.replace(path)
     }
 
     return (
@@ -55,9 +57,11 @@ function Navigation() {
                     <ul className="links-container">
                         <li>
                             <MyNavLink
-                                onClick={onLinkClickListener}
-                                exact
-                                to="/"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    onLinkClickListener("/")
+                                }}
+                                role={"button"}
                             >
                                 Accueil
                             </MyNavLink>
@@ -65,8 +69,11 @@ function Navigation() {
 
                         <li>
                             <MyNavLink
-                                onClick={onLinkClickListener}
-                                to="/apps"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    onLinkClickListener("/apps")
+                                }}
+                                role={"button"}
                             >
                                 Applications
                             </MyNavLink>
@@ -74,9 +81,11 @@ function Navigation() {
 
                         <li>
                             <MyNavLink
-                                onClick={onLinkClickListener}
-                                exact
-                                to="/contact"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    onLinkClickListener("/contact")
+                                }}
+                                role={"button"}
                             >
                                 Contact
                             </MyNavLink>
@@ -88,7 +97,7 @@ function Navigation() {
     )
 }
 
-const Styles = styled.div`
+const Styles = styled.header`
   transition: all 0.25s ease;
   z-index: 5;
   position: fixed;
@@ -264,14 +273,15 @@ const Styles = styled.div`
   }
 `
 
-const MyNavLink = styled(NavLink)`
+const MyNavLink = styled.a`
   position: relative;
   text-decoration: none;
   user-select: none;
   color: white;
   opacity: 0.5;
   transition: all 0.5s ease;
-
+  cursor: pointer;
+  
   &::after {
     border-radius: 5px;
     position: absolute;

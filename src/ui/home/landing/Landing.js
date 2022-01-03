@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import ProfileImage from "../../../assets/self-picture.png"
-import {AndroidLogo} from "../../common/svgs"
+import ProfileImage from "../../../assets/self-picture.jpg"
 
 function Landing() {
     return (
@@ -60,14 +59,12 @@ const Container = styled.section`
   min-height: 100vh;
   align-items: center;
   overflow-x: hidden;
-  flex-wrap: wrap;
   justify-content: center;
 
   .container-text {
     flex: 1 0 0px;
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
     color: white;
     align-self: center;
     text-align: start;
@@ -122,15 +119,32 @@ const Container = styled.section`
     object-fit: cover;
     max-width: 550px;
     min-width: 400px;
+    padding: 5em;
+    border-radius: 120px;
   }
-
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+    .profile-image {
+      width: 100%;
+      padding: 4em;
+    }
+  }
+  
   @media (max-width: 1030px) {
     .container-text {
       font-size: 13px;
     }
   }
 
-  @media (min-width: 796px) and (max-width: 1053px) {
+  @media (min-width: 769px) and (max-width: 1096px) {
+    .text-developer span {
+      margin-left: 3em;
+    }
+  }
+  
+  @media (max-width: 510px) {
     .text-developer span {
       margin-left: 3em;
     }

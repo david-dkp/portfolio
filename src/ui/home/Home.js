@@ -11,11 +11,10 @@ import Testimony from "./testimony/Testimony"
 import Contact from "./contact/Contact";
 import {useHistory, useLocation} from "react-router-dom";
 import { scroller, animateScroll } from "react-scroll"
-import {Waypoint} from "react-waypoint";
 
 function Home() {
     const location = useLocation()
-
+    const history = useHistory()
     const section = location.pathname.slice(location.pathname.lastIndexOf("/") + 1, location.pathname.length)
 
     const scrollConfig = {
