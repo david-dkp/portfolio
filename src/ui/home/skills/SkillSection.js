@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function SkillSection({ title, contentText }) {
+function SkillSection({title, contentText}) {
     return (
         <Container>
             <h6 className="section-title">{title}</h6>

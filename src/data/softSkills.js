@@ -1,9 +1,4 @@
-import {
-    AutonomousLogo,
-    CuriousLogo,
-    AmbitiousLogo,
-    ListeningLogo,
-} from "../ui/common/svgs"
+import {AmbitiousLogo, AutonomousLogo, CuriousLogo, ListeningLogo,} from "../ui/common/svgs"
 
 const softSkills = [
     {

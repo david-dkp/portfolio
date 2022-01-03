@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
-import {NavLink, useHistory} from "react-router-dom"
+import React, {useEffect, useState} from "react"
+import {useHistory} from "react-router-dom"
 import styled from "styled-components"
 import socials from "./../../data/socials"
 import SocialButton from "./SocialButton"
-import { useMediaQuery } from "react-responsive"
+import {useMediaQuery} from "react-responsive"
 
 function Navigation() {
     const history = useHistory()
@@ -43,9 +43,9 @@ function Navigation() {
                     }`}
                     onClick={() => setDrawerOpened(!drawerOpened)}
                 >
-                    <div />
-                    <div />
-                    <div />
+                    <div/>
+                    <div/>
+                    <div/>
                 </div>
 
                 <div className="socials-container">
@@ -101,9 +101,9 @@ const Styles = styled.header`
   transition: all 0.25s ease;
   z-index: 5;
   position: fixed;
-  background-color: ${({ isOnTop }) =>
-          isOnTop ? "rgba(0, 0, 0, 0)" : "#161b26"};
-  box-shadow: ${({ isOnTop }) => (isOnTop ? "none" : "0px 0px 10px black")};
+  background-color: ${({isOnTop}) =>
+    isOnTop ? "rgba(0, 0, 0, 0)" : "#161b26"};
+  box-shadow: ${({isOnTop}) => (isOnTop ? "none" : "0px 0px 10px black")};
   top: 0;
 
   .mobile-scrim {
@@ -230,7 +230,7 @@ const Styles = styled.header`
       justify-content: space-between;
       align-items: center;
       transform: ${(props) =>
-              `translateX(${props.drawerOpened ? "0%" : "-101%"})`};
+    `translateX(${props.drawerOpened ? "0%" : "-101%"})`};
     }
 
     .links-container {

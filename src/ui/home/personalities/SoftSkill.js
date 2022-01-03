@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function SoftSkill({ softSkill: { title, description, logo }, ...props }) {
+function SoftSkill({softSkill: {title, description, logo}, ...props}) {
     return (
         <Container {...props}>
             {logo()}

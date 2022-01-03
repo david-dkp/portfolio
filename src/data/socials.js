@@ -1,4 +1,4 @@
-import { GithubLogo, LinkedinLogo } from "../ui/common/svgs"
+import {GithubLogo, LinkedinLogo} from "../ui/common/svgs"
 
 const socials = [
     {

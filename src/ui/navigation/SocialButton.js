@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, {useEffect, useState} from "react"
 import styled from "styled-components"
 
-function SocialButton({ svgComponent, color, socialName, url }) {
+function SocialButton({svgComponent, color, socialName, url}) {
     const [socialWidth, setSocialWidth] = useState()
 
     useEffect(() => {
@@ -71,8 +71,8 @@ const Container = styled.a`
 
         svg {
             fill: ${(props) => {
-                return props.color
-            }};
+    return props.color
+}};
         }
 
         .social-name-container {
@@ -95,8 +95,8 @@ const Container = styled.a`
             svg {
                 transition: all 0.5s ease;
                 fill: ${(props) => {
-                    return props.color
-                }};
+    return props.color
+}};
             }
 
             .social-name-container {

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function AppTag({ tag }) {
+function AppTag({tag}) {
     return <Container backgroundColor={tag.color}>{tag.label}</Container>
 }
 

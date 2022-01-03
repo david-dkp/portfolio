@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
 import TestimonyItem from "./TestimonyItem"
-import { Carousel } from "react-responsive-carousel"
+import {Carousel} from "react-responsive-carousel"
 import testimonies from "../../../data/testimonies"
 
 function Testimony() {
     return (
         <Container>
-            <Header title="Ce que les autres disent de moi..." />
+            <Header title="Ce que les autres disent de moi..."/>
             <div className="testimony-container">
                 <Carousel
                     autoPlay={false}
@@ -19,7 +19,7 @@ function Testimony() {
                     swipeable={false}
                 >
                     {testimonies.map((e, i) => (
-                        <TestimonyItem testimony={e} key={i} />
+                        <TestimonyItem testimony={e} key={i}/>
                     ))}
                 </Carousel>
             </div>

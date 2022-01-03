@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, {useEffect, useRef, useState} from "react"
 import styled from "styled-components"
-import { throttle } from "lodash"
+import {throttle} from "lodash"
 import cvpdf from "../../../assets/cv_david_dekeuwer.pdf"
 import Header from "../common/Header"
-import { Document, Page } from "react-pdf"
+import {Document, Page} from "react-pdf"
 
 function DownloadCv() {
     const [pdfWidth, setPdfWidth] = useState(0)
@@ -34,7 +34,7 @@ function DownloadCv() {
 
     return (
         <Container>
-            <Header title="Mon CV" />
+            <Header title="Mon CV"/>
             <a
                 ref={pdfWrapperRef}
                 className="cv"
