@@ -1,15 +1,38 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
 import AppProject from "../../common/AppProject"
-import apps from "../../../data/apps"
+import {getProjects} from "../../../apis/projectsApi";
 
 function RecentProjects() {
+    const [currentProjects, setCurrentProjects] = useState([])
+
+    const toApps = (projects) => {
+
+        return projects.map(project => {
+            return {
+                appName: project.fields.name,
+                description: project.fields.description,
+                tags: project.fields.tags.map(i => ({label: i.fields.name, color: i.fields.color})),
+                githubUrl: project.fields.githubUrl,
+                technologies: project.fields.technologies,
+                websiteUrl: project.fields.websiteUrl,
+                image: project.fields.imageUrl.fields.file.url
+            }
+        })
+    }
+
+    useEffect(() => {
+        getProjects().then(data => {
+            setCurrentProjects(toApps(data))
+        })
+    }, [])
+
     return (
         <Container id="projects-section">
             <Header title="Mes projets récents"/>
             <div className="projects-container">
-                {apps.map((app, i) => <AppProject key={i} app={app}/>)}
+                {currentProjects.map((project, i) => <AppProject key={i} app={project}/>)}
             </div>
         </Container>
     )

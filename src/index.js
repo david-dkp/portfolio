@@ -5,9 +5,12 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import "aos/dist/aos.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
-import {pdfjs} from "react-pdf"
 
+import { pdfjs } from "react-pdf"
+import contentfulDataSource from "./apis/contentfulDataSource"
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+
+contentfulDataSource.initialize()
 
 ReactDOM.render(
     <React.StrictMode>
