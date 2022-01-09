@@ -55,7 +55,11 @@ const Container = styled.section`
       flex-direction: column;
       padding-top: 30px;
     }
-
+  
+    .skill-group-container {
+      flex-direction: column;
+    }
+    
     .skill-divider {
       width: 100%;
       height: 1px;
