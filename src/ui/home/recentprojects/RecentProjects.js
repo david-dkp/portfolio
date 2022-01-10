@@ -5,6 +5,7 @@ import AppProject from "../../common/AppProject"
 import {getProjects} from "../../../apis/projectsApi";
 
 function RecentProjects() {
+    const [loading, setLoading] = useState(true)
     const [currentProjects, setCurrentProjects] = useState([])
 
     const toApps = (projects) => {
@@ -25,15 +26,17 @@ function RecentProjects() {
     useEffect(() => {
         getProjects().then(data => {
             setCurrentProjects(toApps(data))
+            setLoading(false)
         })
     }, [])
 
     return (
         <Container id="projects-section">
             <Header title="Mes projets récents"/>
-            <div className="projects-container">
-                {currentProjects.map((project, i) => <AppProject key={i} app={project}/>)}
-            </div>
+            {loading ? <div className={"progressBar"}><div className={"line"} /> </div> :
+                (<div className="projects-container">
+                    {currentProjects.map((project, i) => <AppProject key={i} app={project}/>)}
+                </div>)}
         </Container>
     )
 }
@@ -44,7 +47,41 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 70px;
-
+  
+  .progressBar {
+    
+    @keyframes loadingBarAnim {
+      0% {
+        margin-left: -20%;
+      }
+      
+      100% {
+        margin-left: 120%;
+      }
+    }
+    
+    position: relative;
+    border-radius: 999px;
+    width: 100%;
+    margin-inline: 20px;
+    max-width: 400px;
+    background-color: white;
+    height: 10px;
+    margin-block: 100px;
+    padding: 1px;
+    overflow: hidden;
+    
+    .line {
+      width: 20%;
+      height: 100%;
+      animation: loadingBarAnim 1s running 0s;
+      animation-iteration-count: infinite;
+      background-color: black;
+      border-radius: 999px;
+      transform: translateX(-50%);
+    }
+  }
+  
   .projects-container {
     margin-top: 50px;
     width: 100%;
