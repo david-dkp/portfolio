@@ -36,12 +36,13 @@ const Container = styled.section`
     align-self: center;
     border-radius: 30px;
     width: 90vw;
-    max-width: 800px;
+    max-width: 1000px;
     background-color: white;
   }
 
   .skill-group-container {
     display: flex;
+    flex: 1;
   }
   
   .skill-divider {
