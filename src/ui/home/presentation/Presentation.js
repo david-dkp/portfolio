@@ -23,7 +23,6 @@ function Presentation() {
 const Container = styled.section`
   color: white;
   background-color: #161b26;
-  margin-top: 50px;
 
   .container-text {
     margin: auto;
