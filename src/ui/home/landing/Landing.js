@@ -54,9 +54,8 @@ const Container = styled.section`
   display: flex;
   align-self: center;
   width: 100%;
-  padding: 0px 20px;
+  padding: clamp(3em, 4vw, 50px) 20px;
   max-width: 1100px;
-  min-height: 100vh;
   align-items: center;
   overflow-x: hidden;
   justify-content: center;
