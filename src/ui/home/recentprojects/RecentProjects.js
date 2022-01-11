@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import styled from "styled-components"
 import Header from "../common/Header"
 import AppProject from "../../common/AppProject"
-import {getProjects} from "../../../apis/projectsApi";
+import projectsApi from "../../../apis/projectsApi";
 
 function RecentProjects() {
     const [loading, setLoading] = useState(true)
@@ -31,7 +31,7 @@ function RecentProjects() {
     }
 
     useEffect(() => {
-        getProjects().then(data => {
+        projectsApi.getProjects().then(data => {
             setCurrentProjects(toApps(data.sort(sortByCompletionDate)))
             setLoading(false)
         })

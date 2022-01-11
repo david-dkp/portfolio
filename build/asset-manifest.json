@@ -1,31 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a3c48cf.chunk.css",
-    "main.js": "/static/js/main.801664fb.chunk.js",
-    "main.js.map": "/static/js/main.801664fb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.21933256.js",
-    "runtime-main.js.map": "/static/js/runtime-main.21933256.js.map",
+    "main.css": "/static/css/main.405da793.chunk.css",
+    "main.js": "/static/js/main.dcae0b8f.chunk.js",
+    "main.js.map": "/static/js/main.dcae0b8f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8e46179c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8e46179c.js.map",
     "static/css/2.641f8aa3.chunk.css": "/static/css/2.641f8aa3.chunk.css",
-    "static/js/2.624d2cf6.chunk.js": "/static/js/2.624d2cf6.chunk.js",
-    "static/js/2.624d2cf6.chunk.js.map": "/static/js/2.624d2cf6.chunk.js.map",
-    "static/js/3.ce8e21d8.chunk.js": "/static/js/3.ce8e21d8.chunk.js",
-    "static/js/3.ce8e21d8.chunk.js.map": "/static/js/3.ce8e21d8.chunk.js.map",
+    "static/js/2.5b20152d.chunk.js": "/static/js/2.5b20152d.chunk.js",
+    "static/js/2.5b20152d.chunk.js.map": "/static/js/2.5b20152d.chunk.js.map",
+    "static/js/3.2b9ba788.chunk.js": "/static/js/3.2b9ba788.chunk.js",
+    "static/js/3.2b9ba788.chunk.js.map": "/static/js/3.2b9ba788.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.641f8aa3.chunk.css.map": "/static/css/2.641f8aa3.chunk.css.map",
-    "static/css/main.0a3c48cf.chunk.css.map": "/static/css/main.0a3c48cf.chunk.css.map",
-    "static/js/2.624d2cf6.chunk.js.LICENSE.txt": "/static/js/2.624d2cf6.chunk.js.LICENSE.txt",
-    "static/media/cv_david_dekeuwer.32c15c11.pdf": "/static/media/cv_david_dekeuwer.32c15c11.pdf",
-    "static/media/go4lunch-image.4e551cc1.png": "/static/media/go4lunch-image.4e551cc1.png",
-    "static/media/realestatemanager-image.5302c8fe.png": "/static/media/realestatemanager-image.5302c8fe.png",
-    "static/media/self-picture.8cd23a64.jpg": "/static/media/self-picture.8cd23a64.jpg",
-    "static/media/weatherapp-image.db67b2b3.png": "/static/media/weatherapp-image.db67b2b3.png",
-    "static/media/website-image.06be502c.png": "/static/media/website-image.06be502c.png"
+    "static/css/main.405da793.chunk.css.map": "/static/css/main.405da793.chunk.css.map",
+    "static/js/2.5b20152d.chunk.js.LICENSE.txt": "/static/js/2.5b20152d.chunk.js.LICENSE.txt",
+    "static/media/cv_david_dekeuwer.e243a521.pdf": "/static/media/cv_david_dekeuwer.e243a521.pdf",
+    "static/media/self-picture.8cd23a64.jpg": "/static/media/self-picture.8cd23a64.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.21933256.js",
+    "static/js/runtime-main.8e46179c.js",
     "static/css/2.641f8aa3.chunk.css",
-    "static/js/2.624d2cf6.chunk.js",
-    "static/css/main.0a3c48cf.chunk.css",
-    "static/js/main.801664fb.chunk.js"
+    "static/js/2.5b20152d.chunk.js",
+    "static/css/main.405da793.chunk.css",
+    "static/js/main.dcae0b8f.chunk.js"
   ]
 }

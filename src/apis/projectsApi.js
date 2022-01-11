@@ -1,4 +1,4 @@
-const contentfulDataSource = require("./contentfulDataSource");
+import contentfulDataSource from "./contentfulDataSource";
 
 
 const getProjects = async () => {
@@ -6,6 +6,8 @@ const getProjects = async () => {
     return data.items
 }
 
-module.exports = {
+const projectsApi = {
     getProjects
 }
+
+export default projectsApi

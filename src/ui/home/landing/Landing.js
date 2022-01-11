@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import styled from "styled-components"
 import ProfileImage from "../../../assets/self-picture.jpg"
-import {getAvailability} from "../../../apis/availabilityApi";
+import availabilityApi from "../../../apis/availabilityApi";
 
 function Landing() {
     const [showAvailability, setShowAvailability] = useState(false)
@@ -10,7 +10,7 @@ function Landing() {
 
     useEffect(() => {
         setTimeout(() => {
-            getAvailability().then(availibity => {
+            availabilityApi.getAvailability().then(availibity => {
                 setStatusColor(availibity.fields.statusColor)
                 setAvailabilityText(availibity.fields.availabilityText)
                 setShowAvailability(true)

@@ -1,4 +1,4 @@
-const contentful = require("contentful");
+import contentful from "contentful";
 let client = null
 
 const initialize = () => {
@@ -8,5 +8,8 @@ const initialize = () => {
     })
 }
 
-module.exports.initialize = initialize
-module.exports.getClient = () => client
+const getClient = () => client
+
+const contentfulDataSource = { initialize, getClient }
+
+export default contentfulDataSource
