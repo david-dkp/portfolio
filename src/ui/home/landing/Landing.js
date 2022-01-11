@@ -15,7 +15,7 @@ function Landing() {
                 setAvailabilityText(availibity.fields.availabilityText)
                 setShowAvailability(true)
             })
-        },1000)
+        }, 1000)
     }, [])
 
     return (
@@ -184,12 +184,11 @@ const AvailabilityContainer = styled.div`
   gap: 0.8em;
   margin-top: 2em;
   transition: all 1s ease;
-  
+
   ${({loaded}) => `
     transform: translateY(${loaded ? "0%" : "100%"});
     opacity: ${loaded ? "1" : "0"};
   `}
-  
   .availability-status {
     margin-top: 2px;
     background-color: ${({statusColor}) => statusColor};

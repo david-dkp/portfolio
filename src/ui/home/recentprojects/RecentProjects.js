@@ -40,7 +40,9 @@ function RecentProjects() {
     return (
         <Container id="projects-section">
             <Header title="Mes projets récents"/>
-            {loading ? <div className={"progressBar"}><div className={"line"} /> </div> :
+            {loading ? <div className={"progressBar"}>
+                    <div className={"line"}/>
+                </div> :
                 (<div className="projects-container">
                     {currentProjects.map((project, i) => <AppProject key={i} app={project}/>)}
                 </div>)}
@@ -54,19 +56,19 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 70px;
-  
+
   .progressBar {
-    
+
     @keyframes loadingBarAnim {
       0% {
         margin-left: -20%;
       }
-      
+
       100% {
         margin-left: 120%;
       }
     }
-    
+
     position: relative;
     border-radius: 999px;
     width: 100%;
@@ -77,7 +79,7 @@ const Container = styled.section`
     margin-block: 100px;
     padding: 1px;
     overflow: hidden;
-    
+
     .line {
       width: 20%;
       height: 100%;
@@ -88,7 +90,7 @@ const Container = styled.section`
       transform: translateX(-50%);
     }
   }
-  
+
   .projects-container {
     margin-top: 50px;
     width: 100%;

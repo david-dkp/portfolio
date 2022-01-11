@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React from "react"
 import styled from "styled-components"
 import Landing from "./landing/Landing"
 import Presentation from "./presentation/Presentation"
@@ -9,7 +9,7 @@ import DownloadCv from "./cv/DownloadCv"
 import SoftSkills from "./personalities/SoftSkills"
 import Testimony from "./testimony/Testimony"
 import Contact from "./contact/Contact";
-import { useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {animateScroll, scroller} from "react-scroll"
 
 function Home() {
@@ -31,11 +31,6 @@ function Home() {
         scroller.scrollTo("contact-section", scrollConfig)
     }
 
-    useEffect(() => {
-        document.title =
-            "David Dekeuwer, développeur d'applications Android - Mon site Web - Mon portfolio"
-    }, [])
-
     return (
         <Styles>
             <Landing/>
@@ -52,8 +47,8 @@ function Home() {
 }
 
 const Styles = styled.main`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `
 
 export default Home

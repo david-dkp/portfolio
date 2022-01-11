@@ -40,7 +40,7 @@ const skills = [
             "Sass",
             "Styled Components",
         ],
-        tools: ["Visual Studio Code", "WebStorm","Git", "Figma", "Contentful CMS"],
+        tools: ["Visual Studio Code", "WebStorm", "Git", "Figma", "Contentful CMS"],
     },
 ]
 
