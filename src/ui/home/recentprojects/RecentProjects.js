@@ -23,9 +23,16 @@ function RecentProjects() {
         })
     }
 
+    const sortByCompletionDate = (a, b) => {
+        const dateA = new Date(a.fields.completedAt)
+        const dateB = new Date(b.fields.completedAt)
+
+        return dateB.getTime() - dateA.getTime()
+    }
+
     useEffect(() => {
         getProjects().then(data => {
-            setCurrentProjects(toApps(data))
+            setCurrentProjects(toApps(data.sort(sortByCompletionDate)))
             setLoading(false)
         })
     }, [])
