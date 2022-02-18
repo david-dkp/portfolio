@@ -58,7 +58,7 @@ function Landing() {
                     data-aos-delay="500"
                     className="container-android"
                 >
-                    <h2 className="text-android">Web/Android</h2>
+                    <h2 className="text-android">Web et Mobile</h2>
                 </div>
                 <AvailabilityContainer
                     loaded={showAvailability}

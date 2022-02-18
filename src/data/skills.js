@@ -1,4 +1,4 @@
-import {AndroidLogo, WebLogo} from "../ui/common/svgs"
+import { AndroidLogo, WebLogo } from "../ui/common/svgs"
 
 const skills = [
     {
@@ -40,7 +40,13 @@ const skills = [
             "Sass",
             "Styled Components",
         ],
-        tools: ["Visual Studio Code", "WebStorm", "Git", "Figma", "Contentful CMS"],
+        tools: [
+            "Visual Studio Code",
+            "WebStorm",
+            "Git",
+            "Figma",
+            "Contentful CMS",
+        ],
     },
 ]
 
