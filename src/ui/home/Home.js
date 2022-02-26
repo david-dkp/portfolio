@@ -5,7 +5,6 @@ import Presentation from './presentation/Presentation';
 import RecentProjects from './recentprojects/RecentProjects';
 import Skills from './skills/Skills';
 import Footer from './footer/Footer';
-import DownloadCv from './cv/DownloadCv';
 import SoftSkills from './personalities/SoftSkills';
 import Testimony from './testimony/Testimony';
 import Contact from './contact/Contact';
@@ -39,7 +38,6 @@ function Home() {
       <Skills />
       <RecentProjects />
       <Testimony />
-      <DownloadCv />
       <Contact />
       <Footer />
     </Styles>
