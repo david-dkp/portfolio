@@ -1,71 +1,68 @@
-import React, {useState} from "react"
-import styled from "styled-components"
-import LabelWithTags from "./LabelWithTags"
-import CenterCropImage from "./CenterCropImage"
-import GithubLogo from "./svgs/GithubLogo"
-import ImageViewer from "./ImageViewer"
-import {OpenInBrowser} from "@material-ui/icons"
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import LabelWithTags from './LabelWithTags';
+import CenterCropImage from './CenterCropImage';
+import GithubLogo from './svgs/GithubLogo';
+import ImageViewer from './ImageViewer';
+import { OpenInBrowser } from '@material-ui/icons';
 
-const Technology = ({technology, ...props}) => {
+const Technology = ({ technology, ...props }) => {
+  return (
+    <div className={'technology-container'} {...props}>
+      {technology}
+    </div>
+  );
+};
 
-    return (
-        <div className={"technology-container"} {...props}>
-            {technology}
+function AppProject({ app, onClick }) {
+  const [showImage, setShowImage] = useState(false);
+
+  return (
+    <Container onClick={onClick}>
+      <div className="image-container" onClick={() => setShowImage(true)}>
+        <CenterCropImage image={app.image} />
+        <div className="see-fullscreen-container">Voir en pleine écran</div>
+      </div>
+      <div className="info-container">
+        <LabelWithTags label={app.appName} tags={app.tags} />
+        <p className="content description">{app.description}</p>
+        <h5 className="technologies-title">Technologies</h5>
+        <div className="content technologies-content">
+          {app.technologies.map((e, i) => (
+            <Technology technology={e} key={i} />
+          ))}
         </div>
-    )
-}
+      </div>
 
-function AppProject({app, onClick}) {
-    const [showImage, setShowImage] = useState(false)
+      <div className="more-info-container">
+        <a
+          rel="noreferrer"
+          href={app.githubUrl}
+          target="_blank"
+          className="more-info-button"
+        >
+          <div className="more-info-text">Plus d'infos</div>
+          <GithubLogo />
+        </a>
+        {app.websiteUrl && (
+          <a
+            rel="noreferrer"
+            href={app.websiteUrl}
+            target="_blank"
+            className="website-button"
+          >
+            <OpenInBrowser />
+          </a>
+        )}
+      </div>
 
-    return (
-        <Container onClick={onClick}>
-            <div className="image-container" onClick={() => setShowImage(true)}>
-                <CenterCropImage image={app.image}/>
-                <div className="see-fullscreen-container">
-                    Voir en pleine écran
-                </div>
-            </div>
-            <div className="info-container">
-                <LabelWithTags label={app.appName} tags={app.tags}/>
-                <p className="content description">{app.description}</p>
-                <h5 className="technologies-title">Technologies</h5>
-                <div className="content technologies-content">
-                    {app.technologies.map((e, i) => (
-                        <Technology technology={e} key={i}/>
-                    ))}
-                </div>
-            </div>
-
-            <div className="more-info-container">
-                <a
-                    rel="noreferrer"
-                    href={app.githubUrl}
-                    target="_blank"
-                    className="more-info-button"
-                >
-                    <div className="more-info-text">Plus d'infos</div>
-                    <GithubLogo/>
-                </a>
-                {app.websiteUrl && (
-                    <a
-                        rel="noreferrer"
-                        href={app.websiteUrl}
-                        target="_blank"
-                        className="website-button"
-                    >
-                        <OpenInBrowser/>
-                    </a>
-                )}
-            </div>
-
-            <ImageViewer
-                src={app.image}
-                show={showImage}
-                onClick={() => setShowImage(false)}
-            />
-        </Container>
-    )
+      <ImageViewer
+        src={app.image}
+        show={showImage}
+        onClick={() => setShowImage(false)}
+      />
+    </Container>
+  );
 }
 
 const Container = styled.section`
@@ -120,8 +117,8 @@ const Container = styled.section`
     flex-direction: column;
     gap: 10px;
     font-size: 19px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   .technologies-title {
@@ -217,6 +214,6 @@ const Container = styled.section`
       transform: scale(1.025);
     }
   }
-`
+`;
 
-export default AppProject
+export default AppProject;

@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-function CenterCropImage({image, alt}) {
-    return (
-        <Container>
-            <img src={image} alt={alt}/>
-        </Container>
-    )
+function CenterCropImage({ image, alt }) {
+  return (
+    <Container>
+      <img src={image} alt={alt} />
+    </Container>
+  );
 }
 
 const Container = styled.div`
@@ -21,6 +21,6 @@ const Container = styled.div`
   img {
     width: 100%;
   }
-`
+`;
 
-export default CenterCropImage
+export default CenterCropImage;

@@ -1,15 +1,15 @@
-import * as contentful from "contentful";
-let client = null
+import * as contentful from 'contentful';
+let client = null;
 
 const initialize = () => {
-    client = contentful.createClient({
-        space: process.env["REACT_APP_CONTENTFUL_SPACE_ID"],
-        accessToken: process.env["REACT_APP_CONTENTFUL_API_KEY"]
-    })
-}
+  client = contentful.createClient({
+    space: process.env['REACT_APP_CONTENTFUL_SPACE_ID'],
+    accessToken: process.env['REACT_APP_CONTENTFUL_API_KEY'],
+  });
+};
 
-const getClient = () => client
+const getClient = () => client;
 
-const contentfulDataSource = { initialize, getClient }
+const contentfulDataSource = { initialize, getClient };
 
-export default contentfulDataSource
+export default contentfulDataSource;

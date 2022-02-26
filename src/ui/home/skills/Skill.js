@@ -1,28 +1,22 @@
-import React from "react"
-import styled from "styled-components"
-import SkillSection from "./SkillSection"
+import React from 'react';
+import styled from 'styled-components';
+import SkillSection from './SkillSection';
 
-function Skill({skill: {name, logo, languages, libraries, tools}}) {
-    return (
-        <Container logoColor={logo.color}>
-            <div className="logo-container">
-                {logo.svg()}
-                <h4>{name}</h4>
-                <div className="divider"/>
-            </div>
-            <div className="skill-section-container">
-                <SkillSection
-                    title="Langages"
-                    contentText={languages.join(", ")}
-                />
-                <SkillSection
-                    title="Librairies"
-                    contentText={libraries.join(", ")}
-                />
-                <SkillSection title="Outils" contentText={tools.join(", ")}/>
-            </div>
-        </Container>
-    )
+function Skill({ skill: { name, logo, languages, libraries, tools } }) {
+  return (
+    <Container logoColor={logo.color}>
+      <div className="logo-container">
+        {logo.svg()}
+        <h4>{name}</h4>
+        <div className="divider" />
+      </div>
+      <div className="skill-section-container">
+        <SkillSection title="Langages" contentText={languages.join(', ')} />
+        <SkillSection title="Librairies" contentText={libraries.join(', ')} />
+        <SkillSection title="Outils" contentText={tools.join(', ')} />
+      </div>
+    </Container>
+  );
 }
 
 const Container = styled.div`
@@ -43,7 +37,7 @@ const Container = styled.div`
     gap: 30px;
 
     svg {
-      fill: ${({logoColor}) => logoColor};
+      fill: ${({ logoColor }) => logoColor};
       width: 5em;
       height: 5em;
     }
@@ -69,6 +63,6 @@ const Container = styled.div`
     flex: 1 0 0;
     gap: 2em;
   }
-`
+`;
 
-export default Skill
+export default Skill;

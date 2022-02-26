@@ -1,13 +1,14 @@
-import contentfulDataSource from "./contentfulDataSource";
-
+import contentfulDataSource from './contentfulDataSource';
 
 const getProjects = async () => {
-    const data = await contentfulDataSource.getClient().getEntries({content_type: "project"})
-    return data.items
-}
+  const data = await contentfulDataSource
+    .getClient()
+    .getEntries({ content_type: 'project' });
+  return data.items;
+};
 
 const projectsApi = {
-    getProjects
-}
+  getProjects,
+};
 
-export default projectsApi
+export default projectsApi;

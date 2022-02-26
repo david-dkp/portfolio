@@ -1,22 +1,22 @@
-import React from "react"
-import styled from "styled-components"
-import {CloseRounded} from "@material-ui/icons";
+import React from 'react';
+import styled from 'styled-components';
+import { CloseRounded } from '@material-ui/icons';
 
-function ImageViewer({src, alt, show, onClick}) {
-    if (!show) return null
+function ImageViewer({ src, alt, show, onClick }) {
+  if (!show) return null;
 
-    const handleOnClick = (e) => {
-        onClick()
-    }
+  const handleOnClick = (e) => {
+    onClick();
+  };
 
-    return (
-        <Container onClick={handleOnClick}>
-            <img src={src} alt={alt}/>
-            <CloseButton>
-                <CloseRounded className={"close-icon"}/>
-            </CloseButton>
-        </Container>
-    )
+  return (
+    <Container onClick={handleOnClick}>
+      <img src={src} alt={alt} />
+      <CloseButton>
+        <CloseRounded className={'close-icon'} />
+      </CloseButton>
+    </Container>
+  );
 }
 
 const Container = styled.div`
@@ -35,7 +35,7 @@ const Container = styled.div`
     max-width: 100%;
     max-height: 100%;
   }
-`
+`;
 
 const CloseButton = styled.button`
   position: absolute;
@@ -55,6 +55,6 @@ const CloseButton = styled.button`
     width: 100%;
     height: 100%;
   }
-`
+`;
 
-export default ImageViewer
+export default ImageViewer;
