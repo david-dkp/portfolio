@@ -1,23 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ProfileImage from '../../../assets/self-picture.jpg';
-import availabilityApi from '../../../apis/availabilityApi';
 
 function Landing() {
-  const [showAvailability, setShowAvailability] = useState(false);
-  const [statusColor, setStatusColor] = useState();
-  const [availabilityText, setAvailabilityText] = useState('');
-
-  useEffect(() => {
-    setTimeout(() => {
-      availabilityApi.getAvailability().then((availibity) => {
-        setStatusColor(availibity.fields.statusColor);
-        setAvailabilityText(availibity.fields.availabilityText);
-        setShowAvailability(true);
-      });
-    }, 1000);
-  }, []);
-
   return (
     <Container id="home">
       <img
@@ -60,13 +45,6 @@ function Landing() {
         >
           <h2 className="text-android">Web et Mobile</h2>
         </div>
-        <AvailabilityContainer
-          loaded={showAvailability}
-          statusColor={statusColor}
-        >
-          <div className={'availability-status'} />
-          <p className={'availability-text'}>{availabilityText}</p>
-        </AvailabilityContainer>
       </div>
     </Container>
   );
@@ -175,31 +153,6 @@ const Container = styled.section`
     .container-text {
       font-size: 11px;
     }
-  }
-`;
-
-const AvailabilityContainer = styled.div`
-  display: flex;
-  align-items: start;
-  gap: 0.8em;
-  margin-top: 2em;
-  transition: all 1s ease;
-
-  ${({ loaded }) => `
-    transform: translateY(${loaded ? '0%' : '100%'});
-    opacity: ${loaded ? '1' : '0'};
-  `}
-  .availability-status {
-    margin-top: 2px;
-    background-color: ${({ statusColor }) => statusColor};
-    width: 13px;
-    border-radius: 999px;
-    aspect-ratio: 1 / 1;
-  }
-
-  .availability-text {
-    font-family: sans-serif;
-    font-size: 1.2em;
   }
 `;
 
