@@ -2,6 +2,28 @@ import { AndroidLogo, WebLogo } from '../ui/common/svgs';
 
 const skills = [
   {
+    name: 'Web',
+    logo: {
+      svg: WebLogo,
+      color: '#000',
+    },
+    languages: ['JavaScript', 'HTML', 'CSS', 'SQL'],
+    libraries: [
+      'React',
+      'Redux',
+      'Next',
+      'Storybook',
+      'Node',
+      'Express',
+      'Passport',
+      'Sequelize',
+      'Material UI',
+      'Sass',
+      'Styled Components',
+    ],
+    tools: ['Visual Studio Code', 'Hubspot', 'Git', 'Figma'],
+  },
+  {
     name: 'Android',
     logo: {
       svg: AndroidLogo,
@@ -20,27 +42,6 @@ const skills = [
       'Flow',
     ],
     tools: ['Android Studio', 'Git', 'Figma'],
-  },
-  {
-    name: 'Web',
-    logo: {
-      svg: WebLogo,
-      color: '#000',
-    },
-    languages: ['JavaScript', 'HTML', 'CSS', 'SQL'],
-    libraries: [
-      'React',
-      'Redux',
-      'Next',
-      'Node',
-      'Express',
-      'Passport',
-      'Sequelize',
-      'Material UI',
-      'Sass',
-      'Styled Components',
-    ],
-    tools: ['Visual Studio Code', 'WebStorm', 'Git', 'Figma', 'Contentful CMS'],
   },
 ];
 
