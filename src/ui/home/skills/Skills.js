@@ -52,6 +52,8 @@ const Container = styled.section`
     .skills-container {
       flex-direction: column;
       padding-top: 30px;
+      width: 100vw;
+      border-radius: 0;
     }
 
     .skill-group-container {

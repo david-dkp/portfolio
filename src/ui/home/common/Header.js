@@ -20,14 +20,8 @@ const Container = styled.div`
   .title {
     text-align: center;
     font-weight: lighter;
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     margin: 0em 1em;
-  }
-
-  @media (max-width: 768px) {
-    .title {
-      font-size: 3.6rem;
-    }
   }
 `;
 

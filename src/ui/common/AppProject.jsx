@@ -214,6 +214,11 @@ const Container = styled.section`
       transform: scale(1.025);
     }
   }
+
+  @media (max-width: 450px) {
+    width: 100vw;
+    border-radius: 0px;
+  }
 `;
 
 export default AppProject;
