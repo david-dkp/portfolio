@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CloseRounded } from '@material-ui/icons';
+import { CloseRounded } from '@mui/icons-material';
 
 function ImageViewer({ src, alt, show, onClick }) {
   if (!show) return null;

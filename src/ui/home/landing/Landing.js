@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProfileImage from '../../../assets/self-picture.jpg';
+import { Box, Paper } from '@mui/material';
 
 function Landing() {
   return (
-    <Container id="home">
+    <Box component={Container} id="home">
       <img
         data-aos-once="true"
         data-aos="fade-up"
@@ -46,7 +47,7 @@ function Landing() {
           <h2 className="text-android">Web et Mobile</h2>
         </div>
       </div>
-    </Container>
+    </Box>
   );
 }
 

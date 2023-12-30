@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import socials from './../../data/socials';
 import SocialButton from './SocialButton';
 import { useMediaQuery } from 'react-responsive';
+import HideOnScroll from '../home/common/HideOnScroll';
 
 function Navigation() {
   const [drawerOpened, setDrawerOpened] = useState(false);
@@ -22,42 +23,46 @@ function Navigation() {
     }
   }, [isMobile]);
 
+  const Wrapper = isMobile ? React.Fragment : HideOnScroll;
+
   return (
-    <Styles isOnTop={isOnTop} drawerOpened={drawerOpened}>
-      <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
+    <Wrapper>
+      <Styles isOnTop={isOnTop} drawerOpened={drawerOpened}>
+        <div className="mobile-scrim" onClick={() => setDrawerOpened(false)} />
 
-      <div className="container">
-        <div
-          className={`hamburger-button ${drawerOpened ? 'opened' : 'closed'}`}
-          onClick={() => setDrawerOpened(!drawerOpened)}
-        >
-          <div />
-          <div />
-          <div />
+        <div className="container">
+          <div
+            className={`hamburger-button ${drawerOpened ? 'opened' : 'closed'}`}
+            onClick={() => setDrawerOpened(!drawerOpened)}
+          >
+            <div />
+            <div />
+            <div />
+          </div>
+
+          <div className="socials-container">
+            {socials.map((social, i) => (
+              <SocialButton key={i} {...social} />
+            ))}
+          </div>
+          <nav>
+            <ul className="links-container">
+              <li>
+                <MyNavLink href="#home">Accueil</MyNavLink>
+              </li>
+
+              <li>
+                <MyNavLink href="#apps">Applications</MyNavLink>
+              </li>
+
+              <li>
+                <MyNavLink href="#contact">Contact</MyNavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
-
-        <div className="socials-container">
-          {socials.map((social, i) => (
-            <SocialButton key={i} {...social} />
-          ))}
-        </div>
-        <nav>
-          <ul className="links-container">
-            <li>
-              <MyNavLink href="#home">Accueil</MyNavLink>
-            </li>
-
-            <li>
-              <MyNavLink href="#apps">Applications</MyNavLink>
-            </li>
-
-            <li>
-              <MyNavLink href="#contact">Contact</MyNavLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </Styles>
+      </Styles>
+    </Wrapper>
   );
 }
 

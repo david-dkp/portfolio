@@ -37,7 +37,6 @@ function Home() {
       <SoftSkills />
       <Skills />
       <RecentProjects />
-      <Testimony />
       <Contact />
       <Footer />
     </Styles>

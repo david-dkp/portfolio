@@ -1,47 +1,43 @@
 import { AndroidLogo, WebLogo } from '../ui/common/svgs';
+import { FlutterDash, Web } from '@mui/icons-material';
+import FlutterLogo from '../ui/common/svgs/FlutterLogo';
 
 const skills = [
   {
     name: 'Web',
     logo: {
-      svg: WebLogo,
+      Svg: Web,
       color: '#000',
     },
     languages: ['JavaScript', 'HTML', 'CSS', 'SQL'],
+    libraries: ['React', 'Next', 'Vue', 'Redux', 'NestJS', 'TypeORM'],
+    tools: ['Git', 'Docker', 'Visual Studio Code'],
+  },
+  {
+    name: 'Flutter',
+    logo: {
+      Svg: FlutterLogo,
+      color: '#000',
+    },
+    languages: ['Dart', 'SQL'],
     libraries: [
-      'React',
-      'Redux',
-      'Next',
-      'Storybook',
-      'Node',
-      'Express',
-      'Passport',
-      'Sequelize',
-      'Material UI',
-      'Sass',
-      'Styled Components',
+      'Floor',
+      'BLoC',
+      'Retrofit',
+      'Shared Preferences',
+      'Material Design',
     ],
-    tools: ['Visual Studio Code', 'Hubspot', 'Git', 'Figma'],
+    tools: ['Visual Studio Code', 'Git', 'Notion'],
   },
   {
     name: 'Android',
     logo: {
-      svg: AndroidLogo,
+      Svg: AndroidLogo,
       color: '#3BD37F',
     },
     languages: ['Java', 'Kotlin', 'XML', 'SQL'],
-    libraries: [
-      'Jetpack',
-      'Navigation Component',
-      'Retrofit',
-      'Dagger Hilt',
-      'Room',
-      'Material Design',
-      'RxJava',
-      'Coroutines',
-      'Flow',
-    ],
-    tools: ['Android Studio', 'Git', 'Figma'],
+    libraries: ['Jetpack', 'Retrofit', 'Dagger Hilt', 'Room', 'RxJava', 'Flow'],
+    tools: ['Android Studio', 'Git'],
   },
 ];
 

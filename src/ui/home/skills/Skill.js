@@ -6,7 +6,7 @@ function Skill({ skill: { name, logo, languages, libraries, tools } }) {
   return (
     <Container logoColor={logo.color}>
       <div className="logo-container">
-        {logo.svg()}
+        <logo.Svg />
         <h4>{name}</h4>
         <div className="divider" />
       </div>
@@ -38,8 +38,8 @@ const Container = styled.div`
 
     svg {
       fill: ${({ logoColor }) => logoColor};
-      width: 5em;
-      height: 5em;
+      height: 60px;
+      width: auto;
     }
 
     h4 {

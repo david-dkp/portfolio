@@ -4,7 +4,8 @@ import LabelWithTags from './LabelWithTags';
 import CenterCropImage from './CenterCropImage';
 import GithubLogo from './svgs/GithubLogo';
 import ImageViewer from './ImageViewer';
-import { OpenInBrowser } from '@material-ui/icons';
+import { OpenInBrowser } from '@mui/icons-material';
+import { Box } from '@mui/material';
 
 const Technology = ({ technology, ...props }) => {
   return (
@@ -35,24 +36,36 @@ function AppProject({ app, onClick }) {
       </div>
 
       <div className="more-info-container">
-        <a
-          rel="noreferrer"
-          href={app.githubUrl}
-          target="_blank"
-          className="more-info-button"
-        >
-          <div className="more-info-text">Plus d'infos</div>
-          <GithubLogo />
-        </a>
-        {app.websiteUrl && (
+        {app.githubUrl && (
           <a
+            rel="noreferrer"
+            href={app.githubUrl}
+            target="_blank"
+            className="more-info-button"
+          >
+            <div className="more-info-text">Plus d'infos</div>
+            <GithubLogo />
+          </a>
+        )}
+        {app.websiteUrl && (
+          <Box
+            component={'a'}
+            sx={{
+              width: !app.githubUrl ? '100%' : undefined,
+              m: !app.githubUrl ? 2 : undefined,
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
+            }}
             rel="noreferrer"
             href={app.websiteUrl}
             target="_blank"
             className="website-button"
           >
+            {!app.githubUrl && 'Consulter le site'}
             <OpenInBrowser />
-          </a>
+          </Box>
         )}
       </div>
 
