@@ -35,39 +35,40 @@ function AppProject({ app, onClick }) {
         </div>
       </div>
 
-      <div className="more-info-container">
-        {app.githubUrl && (
-          <a
-            rel="noreferrer"
-            href={app.githubUrl}
-            target="_blank"
-            className="more-info-button"
-          >
-            <div className="more-info-text">Plus d'infos</div>
-            <GithubLogo />
-          </a>
-        )}
-        {app.websiteUrl && (
-          <Box
-            component={'a'}
-            sx={{
-              width: !app.githubUrl ? '100%' : undefined,
-              m: !app.githubUrl ? 2 : undefined,
-              textDecoration: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 2,
-            }}
-            rel="noreferrer"
-            href={app.websiteUrl}
-            target="_blank"
-            className="website-button"
-          >
-            {!app.githubUrl && 'Consulter le site'}
-            <OpenInBrowser />
-          </Box>
-        )}
-      </div>
+      {(app.githubUrl || app.websiteUrl) && (
+        <div className="more-info-container">
+          {app.githubUrl && (
+            <a
+              rel="noreferrer"
+              href={app.githubUrl}
+              target="_blank"
+              className="more-info-button"
+            >
+              <div className="more-info-text">Plus d'infos</div>
+              <GithubLogo />
+            </a>
+          )}
+          {app.websiteUrl && (
+            <Box
+              component={'a'}
+              sx={{
+                width: !app.githubUrl ? '100%' : undefined,
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 2,
+              }}
+              rel="noreferrer"
+              href={app.websiteUrl}
+              target="_blank"
+              className="website-button"
+            >
+              {!app.githubUrl && 'Consulter le site'}
+              <OpenInBrowser />
+            </Box>
+          )}
+        </div>
+      )}
 
       <ImageViewer
         src={app.image}
@@ -88,6 +89,7 @@ const Container = styled.section`
   height: 600px;
   text-align: start;
   box-shadow: 0px 0px 3px black;
+  background-color: white;
 
   .image-container {
     cursor: pointer;
@@ -122,10 +124,9 @@ const Container = styled.section`
 
   .info-container {
     background-color: white;
-    height: 300px;
+    flex: 1;
     overflow: scroll;
     padding: 30px;
-    padding-bottom: 0px;
     display: inline-flex;
     flex-direction: column;
     gap: 10px;
@@ -165,7 +166,7 @@ const Container = styled.section`
     align-items: center;
     justify-content: center;
     gap: 15px;
-    flex-grow: 1;
+    padding: 1em;
   }
 
   .more-info-button {
@@ -173,8 +174,7 @@ const Container = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 70%;
-    max-width: 250px;
+    flex: 1;
     background-color: #1f273d;
     border-radius: 999px;
     color: white;
